@@ -5,7 +5,7 @@ const Search = () => {
     const [search , setSearch] = useState(null)
 
     useEffect(() => {
-        const url = "www.thecocktaildb.com/api/json/v1/1/random.php";
+        const url = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=";
         fetch(url)// url string
         .then((response) => response.json())//wait for json response
         .then((json) => {// then take json and exec
@@ -16,7 +16,9 @@ const Search = () => {
 
       console.log(search)
   return (
-    <div>Search</div>
+    <>
+    <input type="text" placeholder="Search..."></input>
+    </>
   )
 }
 
