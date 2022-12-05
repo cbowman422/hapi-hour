@@ -1,7 +1,7 @@
 # Project-2
 
 ## Collaborators
-Christopher Bowman
+Christopher Bowman,
 Efrain Encarnacion
  
 ## Project Description
