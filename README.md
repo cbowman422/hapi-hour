@@ -1,5 +1,5 @@
 # Link to PLANNING.md
-[a relative link](PLANNING.md)
+[link to PLANNING.md](PLANNING.md)
 
 # Getting Started with Create React App
 
