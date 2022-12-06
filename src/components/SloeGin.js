@@ -36,7 +36,7 @@ const SloeGin = () => {
           })} 
     </div>
       :
-    <p> loading .. </p>
+    <p>  </p>
 )
 }
 

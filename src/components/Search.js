@@ -3,6 +3,8 @@ import React from 'react'
 import Gin from './Gin'
 import SloeGin from './SloeGin'
 import Vodka from './Vodka'
+import PeachVodka from './PeachVodka'
+import LemonVodka from './LemonVodka'
 
 const Search = (props) => {
   
@@ -26,6 +28,8 @@ const Search = (props) => {
             <>
                   <div>
                   <Vodka />
+                  <PeachVodka />
+                  <LemonVodka />
                   </div> 
             </>
             )
@@ -35,7 +39,10 @@ const Search = (props) => {
             <>
                   <div>
                   <Gin />
+                  <SloeGin />
                   <Vodka />
+                  <PeachVodka />
+                  <LemonVodka />
                   </div> 
             </>
             )
