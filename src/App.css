@@ -45,23 +45,12 @@ input {
   margin-left: 15px;
   list-style-type: none;
   z-index: 0;
-  /* max-height: 500px; */
 }
+
 .container{
   display: grid;
   grid-template-columns: 0.15fr 1fr;
   grid-template-rows: 1fr;
   grid-column-gap: 0px;
   grid-row-gap: 0px;
-}
-
-
-.container{
-
-  display: grid;
-  grid-template-columns: 0.15fr 1fr;
-  grid-template-rows: 1fr;
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
-
 }
