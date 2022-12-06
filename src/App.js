@@ -4,9 +4,9 @@ import Search from './components/Search';
 import { Route, Routes } from 'react-router-dom'
 import './App.css';
 import { useState } from 'react';
+import Sticky from 'react-stickynode';
 
 function App() {
-
 
 
 const [ginClicked, setGinClicked] = useState(false);
@@ -16,13 +16,15 @@ const [vodkaClicked, setVodkaClicked] = useState(false);
 return (
   <div>
     <main className="container">
+      <Sticky top={70}>
       <ul className="navBarSide">
         <p>Filters:</p>
-        <li> <input type='checkbox' onClick={() => setGinClicked(current => !current)} ></input><span>Gin</span>
-        </li>
+        <li> 
+        </li> <input type='checkbox' onClick={() => setGinClicked(current => !current)} ></input><span>Gin</span> 
         <li> <input type='checkbox' onClick={() => setVodkaClicked(current => !current)} ></input><span>Vodka</span>
         </li>
       </ul>
+      </Sticky>
       <div>
         <Routes>
           <Route path='/' element={<Search ginProp={ginClicked} vodkaProp={vodkaClicked}/>} />
@@ -34,3 +36,5 @@ return (
 );
 }
 export default App;
+
+
