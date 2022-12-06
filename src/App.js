@@ -8,10 +8,11 @@ import { useState } from 'react';
 function App() {
 
 const [ginClicked, setGinClicked] = useState(false);
+const [vodkaClicked, setVodkaClicked] = useState(false);
 
 
   return (
-    <div className='container'>
+    <div>
       <header className="header">
           <h1>
             <a href="/">Cocktails</a>
@@ -19,8 +20,9 @@ const [ginClicked, setGinClicked] = useState(false);
       </header>
       <main>
       <input type='radio' onClick={() => setGinClicked(current => !current)} ></input><span>Gin</span>
+      <input type='radio' onClick={() => setVodkaClicked(current => !current)} ></input><span>Vodka</span>
         <Routes>
-          <Route path='/' element={<Search ginProp={ginClicked} />} />
+          <Route path='/' element={<Search ginProp={ginClicked} vodkaProp={vodkaClicked}/>} />
           <Route path='/drinks/:id' element={ <DrinkDetails /> } />
         </Routes>
       </main>

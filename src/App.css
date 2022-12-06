@@ -1,10 +1,6 @@
 .App {
-  display: grid;
   text-align: center;
   background-color: #1a214d;
-}
-.container {
-
 }
 
 header {
@@ -28,9 +24,12 @@ input {
   border: 5px;
 }
 
-.searchNav {
-  background-color: #3b4a69;
-  
+.componentCSS {
+  border: solid;
+  display: inline-block;
+  border-radius: 5px;
+  height: 150px;
+  width: 150px;
 }
 
 
