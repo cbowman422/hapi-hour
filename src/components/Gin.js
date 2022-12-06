@@ -1,5 +1,6 @@
 import React from 'react'
 import {useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 
 const Gin = () => {
     const [gin , setGin] = useState(null)
@@ -21,7 +22,7 @@ const Gin = () => {
       {gin.drinks.map((ginMap,idx) => {
         return (
 
-      <div key={idx} className='componentCSS'>
+          <Link to={`/drinks/${ginMap.idDrink}`} key={idx} className='componentCSS'>
     
             <div className="cardTitle">
               {ginMap.strDrink}
@@ -30,7 +31,7 @@ const Gin = () => {
               <img width={100} src={ginMap.strDrinkThumb}></img>
             </div>
 
-        </div>
+          </Link>
                )
           })} 
     </div>

@@ -7,7 +7,7 @@ import { useState } from 'react';
 
 function App() {
 
-const [filter, setFilter] = useState(false);
+
 
 const [ginClicked, setGinClicked] = useState(false);
 const [vodkaClicked, setVodkaClicked] = useState(false);

@@ -2,6 +2,7 @@
   text-align: center;
   background-color: #1A214D;
 }
+
 header {
   background: #1A214D;
   color: white;
@@ -12,20 +13,24 @@ header {
   z-index: 1;
   width: 100%;
 }
+
 h1 {
   font-family: 'Monaco', monospace;
   font-weight: 300;
   margin: 0;
   display: inline-block;
 }
+
 header a {
   color:white;
   text-decoration: none;
 }
+
 input {
   background-color: #2F3541;
   border: 5px;
 }
+
 .componentCSS {
 
   border: solid;
@@ -36,6 +41,7 @@ input {
   margin: 10px;
   padding: 10px;
 }
+
 .navBarSide{
   width: 150px;
   background-color: rgb(212, 212, 212);
