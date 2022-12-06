@@ -23,12 +23,11 @@ const Vodka = () => {
             return (
     
           <div key={idx} className='componentCSS'>
-        
+                <div>       
+                    <img width={150} src={vodkaMap.strDrinkThumb}></img>
+                </div>
                 <div className="cardTitle">
                     {vodkaMap.strDrink} 
-                </div>
-                <div>       
-                    <img width={100} src={vodkaMap.strDrinkThumb}></img>
                 </div>
     
           </div>

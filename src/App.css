@@ -3,9 +3,8 @@
   background-color: #1A214D;
 }
 header {
-  background: rgb(42,0,111);
-  background: linear-gradient(180deg, rgba(42,0,111,1) 0%, rgba(15,6,31,1) 100%);
-  color: white;
+  background: rgb(0,0,0);
+  background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(14,4,32,1) 50%, rgba(30,9,66,1) 100%);
   padding: 1rem;
   height: 30px;
   position: sticky;
@@ -24,7 +23,6 @@ header a {
   text-decoration: none;
 }
 .componentCSS {
-  border: solid;
   display: inline-block;
   border-radius: 5px;
   min-height: 150px;
@@ -32,9 +30,21 @@ header a {
   margin: 10px;
   padding: 10px;
 }
+.componentCSS img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cardTitle {
+  background-color: rgb(255, 255, 255);
+  color: black;
+  padding: 5px;
+  height: 50px;
+  font-size: 16px;
+}
 .navBarSide{
   width: 150px;
-  background-color: #1c0345;
+  background-color: #0e0420;
   margin-left: 15px;
   padding: 10px;
   top: 0;
@@ -50,7 +60,7 @@ header a {
   display: grid;
   font-family: 'Times New Roman', serif;
   color: whitesmoke;
-  grid-template-columns: 0.25fr 1fr;
+  grid-template-columns: 20% 1fr;
   grid-template-rows: 1fr;
   grid-column-gap: 0px;
   grid-row-gap: 0px;
