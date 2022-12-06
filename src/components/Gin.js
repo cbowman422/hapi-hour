@@ -21,18 +21,12 @@ const Gin = () => {
       {gin.drinks.map((ginMap,idx) => {
         return (
 
-
       <div key={idx} className='searchNav'>
-        {/* <input className='searchName' type="text" placeholder="Search..."></input>
-        <div className='filters'>
-          <div className='ingredient'>
-          <input type='radio'></input><span>Gin</span>
-          </div> */}
+    
           <div className="result">
             {ginMap.strDrink}        
-          </div>
-      
-        {/* </div> */}
+      </div>
+
       </div>
                )
           })} 
