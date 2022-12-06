@@ -13,14 +13,13 @@ const [vodkaClicked, setVodkaClicked] = useState(false);
 
   return (
     <div>
-      <header className="header">
-          <h1>
-            <a href="/">Cocktails</a>
-          </h1>
-      </header>
       <main>
+        <div className="navBarSide">
       <input type='radio' onClick={() => setGinClicked(current => !current)} ></input><span>Gin</span>
+        </div>
+        <div className="navBarSide">   
       <input type='radio' onClick={() => setVodkaClicked(current => !current)} ></input><span>Vodka</span>
+        </div> 
         <Routes>
           <Route path='/' element={<Search ginProp={ginClicked} vodkaProp={vodkaClicked}/>} />
           <Route path='/drinks/:id' element={ <DrinkDetails /> } />
