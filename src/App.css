@@ -38,18 +38,23 @@ input {
 .navBarSide{
   width: 150px;
   background-color: rgb(212, 212, 212);
-  padding: 10px;
-  position: sticky;
-  top: 100px;
   margin-left: 15px;
+  padding: 10px;
+  top: 0;
+  position: -webkit-sticky;
+  position: sticky;
   list-style-type: none;
-  z-index: 0;
-  /* max-height: 500px; */
+  height: 500px;
+}
+.navBarSide p {
+  margin: auto;
 }
 .container{
   display: grid;
-  grid-template-columns: 0.15fr 1fr;
+  grid-template-columns: 0.25fr 1fr;
   grid-template-rows: 1fr;
   grid-column-gap: 0px;
   grid-row-gap: 0px;
 }
+
+/* Nav Bar CSS */

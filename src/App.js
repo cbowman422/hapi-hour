@@ -4,10 +4,11 @@ import Search from './components/Search';
 import { Route, Routes } from 'react-router-dom'
 import './App.css';
 import { useState } from 'react';
+import Sticky from 'react-stickynode';
 
 function App() {
 
-const [filter, setFilter] = useState(false);
+//const [filter, setFilter] = useState(false);
 
 const [ginClicked, setGinClicked] = useState(false);
 const [vodkaClicked, setVodkaClicked] = useState(false);
@@ -16,13 +17,15 @@ const [vodkaClicked, setVodkaClicked] = useState(false);
 return (
   <div>
     <main className="container">
-      <ul className="navBarSide">
-        <p>Filters:</p>
-        <li> <input type='radio' onClick={() => setGinClicked(current => !current)} ></input><span>Gin</span>
-        </li>
-        <li> <input type='radio' onClick={() => setVodkaClicked(current => !current)} ></input><span>Vodka</span>
-        </li>
-      </ul>
+      <Sticky top={70}>
+        <ul className="navBarSide">
+          <label><p>Filters:</p></label>
+          <li> <input type='checkbox' onClick={() => setGinClicked(current => !current)} ></input><span>Gin</span>
+          </li>
+          <li> <input type='checkbox' onClick={() => setVodkaClicked(current => !current)} ></input><span>Vodka</span>
+          </li>
+        </ul>
+      </Sticky>
       <div>
         <Routes>
           <Route path='/' element={<Search ginProp={ginClicked} vodkaProp={vodkaClicked}/>} />
