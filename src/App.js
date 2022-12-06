@@ -18,9 +18,9 @@ return (
     <main className="container">
       <ul className="navBarSide">
         <p>Filters:</p>
-        <li> <input type='radio' onClick={() => setGinClicked(current => !current)} ></input><span>Gin</span>
+        <li> <input type='checkbox' onClick={() => setGinClicked(current => !current)} ></input><span>Gin</span>
         </li>
-        <li> <input type='radio' onClick={() => setVodkaClicked(current => !current)} ></input><span>Vodka</span>
+        <li> <input type='checkbox' onClick={() => setVodkaClicked(current => !current)} ></input><span>Vodka</span>
         </li>
       </ul>
       <div>

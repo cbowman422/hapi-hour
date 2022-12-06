@@ -60,3 +60,12 @@ input {
   grid-column-gap: 0px;
   grid-row-gap: 0px;
 }
+
+.detailList{
+  list-style: none;
+}
+
+.details-container{
+background: lightblue;
+padding: 15px;
+}

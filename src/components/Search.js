@@ -6,36 +6,38 @@ import Vodka from './Vodka'
 const Search = (props) => {
   
 
-
-  
- if (props.ginProp && !props.vodkaProp) {
-      return (
-            <>
-                  <div>
-                  <Gin />
-                  </div> 
-            </>
-            )
-  }
-  if (props.vodkaProp && !props.ginProp){
-      return (
-            <>
-                  <div>
-                  <Vodka />
-                  </div> 
-            </>
-            )
-  }
-  if (props.ginProp && props.vodkaProp){
-      return (
-            <>
-                  <div>
-                  <Gin />
-                  <Vodka />
-                  </div> 
-            </>
-            )
-  }
+      return (props.ginProp) ? <Gin />
+      : (props.vodkaProp) ? <Vodka />
+      : ("")
+       
+//   if (props.ginProp && !props.vodkaProp) {
+//       return (
+//             <>
+//                   <div>
+//                   <Gin />
+//                   </div> 
+//             </>
+//             )
+//   }
+//   if (props.vodkaProp && !props.ginProp){
+//       return (
+//             <>
+//                   <div>
+//                   <Vodka />
+//                   </div> 
+//             </>
+//             )
+//   }
+//   if (props.ginProp && props.vodkaProp){
+//       return (
+//             <>
+//                   <div>
+//                   <Gin />
+//                   <Vodka />
+//                   </div> 
+//             </>
+//             )
+//   }
 }
 
 export default Search
