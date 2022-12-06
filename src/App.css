@@ -1,15 +1,8 @@
 .App {
-  display: grid;
   text-align: center;
   background-color: #1a214d;
 }
-.container {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: .2fr repeat(4, 1fr);
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
-}
+
 
 header {
   background: #1a214d;
@@ -33,10 +26,6 @@ input {
   border: 5px;
 }
 
-.searchNav {
-  background-color: #3b4a69;
-  grid-area: 2 / 1 / 6 / 3;
-}
 
 
 .App-header {
