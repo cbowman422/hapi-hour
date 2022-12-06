@@ -24,11 +24,11 @@ const Gin = () => {
 
           <Link to={`/drinks/${ginMap.idDrink}`} key={idx} className='componentCSS'>
     
+            <div>        
+              <img width={150} src={ginMap.strDrinkThumb}></img>
+            </div>
             <div className="cardTitle">
               {ginMap.strDrink}
-            </div>
-            <div>        
-              <img width={100} src={ginMap.strDrinkThumb}></img>
             </div>
 
           </Link>
