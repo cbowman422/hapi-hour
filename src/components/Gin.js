@@ -30,7 +30,7 @@ const Gin = () => {
               <img width={100} src={ginMap.strDrinkThumb}></img>
             </div>
 
-      </div>
+        </div>
                )
           })} 
     </div>
