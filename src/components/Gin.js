@@ -21,11 +21,14 @@ const Gin = () => {
       {gin.drinks.map((ginMap,idx) => {
         return (
 
-      <div key={idx} className='searchNav'>
+      <div key={idx} className='componentCSS'>
     
-          <div className="result">
-            {ginMap.strDrink}        
-      </div>
+            <div className="cardTitle">
+              {ginMap.strDrink}
+            </div>
+            <div>        
+              <img width={100} src={ginMap.strDrinkThumb}></img>
+            </div>
 
       </div>
                )
