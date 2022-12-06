@@ -2,11 +2,10 @@ import React from 'react'
 import Gin from './Gin'
 import App from '../App'
 
-const Search = () => {
+const Search = (props) => {
   
 
-  
- if (true) {
+ if (props.clickedGin) {
   return (
 <>
       <div>
