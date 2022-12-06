@@ -30,19 +30,31 @@ input {
 }
 
 .componentCSS {
+
   border: solid;
   display: inline-block;
   border-radius: 5px;
-  height: 150px;
+  min-height: 150px;
   width: 150px;
   margin: 10px;
   padding: 10px;
 
 }
 
+
 .navBarSide{
-  display: block;
   width: 150px;
   background-color: gray;
   padding: 10px;
+}
+
+
+.container{
+
+  display: grid;
+  grid-template-columns: 0.15fr 1fr;
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+
 }

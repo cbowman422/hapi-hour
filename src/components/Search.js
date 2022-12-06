@@ -8,7 +8,7 @@ const Search = (props) => {
 
 
   
- if (props.ginProp) {
+ if (props.ginProp && !props.vodkaProp) {
       return (
             <>
                   <div>
@@ -17,7 +17,7 @@ const Search = (props) => {
             </>
             )
   }
-  if (props.vodkaProp){
+  if (props.vodkaProp && !props.ginProp){
       return (
             <>
                   <div>
