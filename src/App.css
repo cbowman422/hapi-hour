@@ -13,7 +13,7 @@ header {
   width: 100%;
 }
 h1 {
-  font-family: 'Times New Roman', serif;
+  font-family: 'Maven Pro', sans-serif;
   font-weight: 300;
   margin: 0;
   display: inline-block;
@@ -26,6 +26,7 @@ header a {
   display: inline-block;
   border-radius: 5px;
   min-height: 150px;
+  min-width: 150px;
   width: 150px;
   margin: 10px;
   padding: 10px;
@@ -38,9 +39,11 @@ header a {
 .cardTitle {
   background-color: rgb(255, 255, 255);
   color: black;
+  font-weight: bold;
   padding: 5px;
   height: 50px;
   font-size: 16px;
+  text-align: left;
 }
 .navBarSide{
   width: 150px;
@@ -58,7 +61,7 @@ header a {
 }
 .container{
   display: grid;
-  font-family: 'Times New Roman', serif;
+  font-family: 'Maven Pro', sans-serif;
   color: whitesmoke;
   grid-template-columns: 20% 1fr;
   grid-template-rows: 1fr;
