@@ -3,13 +3,11 @@
   background-color: #1a214d;
 }
 
-
 header {
   background: #1a214d;
   color: white;
   padding: 1rem;
-  grid-area: 1 / 1 / 2 / 7;
-  justify-content: space-between;
+  height: 30px;
 }
 h1 {
   font-family: 'Monaco', monospace;

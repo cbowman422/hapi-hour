@@ -1,20 +1,39 @@
 import React from 'react'
+import {useState, useEffect } from 'react'
 
 const Gin = () => {
-  const [gin , setGin] = useState(null)
+    const [gin , setGin] = useState(null)
 
     useEffect(() => {
         const url = "https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=Gin";
-        fetch(url)// url string
-        .then((response) => response.json())//wait for json response
-        .then((json) => {// then take json and exec
-          setSearch(json)
+        fetch(url)
+        .then((response) => response.json())
+        .then((json) => {
+          setGin(json)
         })
-        .catch(console.error) // Catch and log any errors to the console
+        .catch(console.error) 
       }, []);
-  return (
-    <div>Gin</div>
-  )
+
+
+  return ( gin ?
+
+    <div>
+      {gin.drinks.map((ginMap,idx) => {
+        return (
+
+      <div key={idx} className='searchNav'>
+    
+          <div className="result">
+            {ginMap.strDrink}        
+      </div>
+
+      </div>
+               )
+          })} 
+    </div>
+      :
+    <p> loading .. </p>
+)
 }
 
 export default Gin
