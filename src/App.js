@@ -9,10 +9,6 @@ function App() {
 
 const [ginClicked, setGinClicked] = useState(false);
 
-// function handleClick(){
-//   setGinClicked(current => !current)
-//   console.log(ginClicked)
-// }
 
   return (
     <div className='container'>
@@ -24,7 +20,7 @@ const [ginClicked, setGinClicked] = useState(false);
       <main>
       <input type='radio' onClick={() => setGinClicked(current => !current)} ></input><span>Gin</span>
         <Routes>
-          <Route path='/' element={<Search />} />
+          <Route path='/' element={<Search ginProp={ginClicked} />} />
           <Route path='/drinks/:id' element={ <DrinkDetails /> } />
         </Routes>
       </main>

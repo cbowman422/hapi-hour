@@ -25,7 +25,8 @@ const Gin = () => {
     
           <div className="result">
             {ginMap.strDrink}        
-      </div>
+            <img width={100} src={ginMap.strDrinkThumb}></img>
+          </div>
 
       </div>
                )

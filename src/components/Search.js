@@ -2,11 +2,11 @@ import React from 'react'
 import Gin from './Gin'
 import App from '../App'
 
-const Search = () => {
+const Search = (props) => {
   
-
+// console.log(props.ginProp.)
   
- if (true) {
+ if (props.ginProp) {
   return (
 <>
       <div>
