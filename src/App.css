@@ -1,20 +1,41 @@
 .App {
+  display: grid;
   text-align: center;
+  background-color: #1a214d;
+}
+.container {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: .2fr repeat(4, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
 }
 
 header {
   background: #1a214d;
   color: white;
-  padding: 1rem
+  padding: 1rem;
+  grid-area: 1 / 1 / 2 / 7;
+  justify-content: space-between;
 }
 h1 {
   font-family: 'Monaco', monospace;
   font-weight: 300;
   margin: 0;
+  display: inline-block;
 }
 header a {
   color:white;
   text-decoration: none;
+}
+input {
+  background-color: #2f3541;
+  border: 5px;
+}
+
+.searchNav {
+  background-color: #3b4a69;
+  grid-area: 2 / 1 / 6 / 3;
 }
 
 
