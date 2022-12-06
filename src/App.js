@@ -1,26 +1,34 @@
 import React from 'react';
-import Drinks from './components/Drinks';
 import DrinkDetails from './components/DrinkDetails';
 import Search from './components/Search';
 import { Route, Routes } from 'react-router-dom'
 import './App.css';
+import { useState } from 'react';
 
 function App() {
+
+const [ginClicked, setGinClicked] = useState(false);
+
+// function handleClick(){
+//   setGinClicked(current => !current)
+//   console.log(ginClicked)
+// }
+
   return (
-    <>
-      <header>
-        <h1>
-          <a href="/">Cocktails</a>
-        </h1>
+    <div className='container'>
+      <header className="header">
+          <h1>
+            <a href="/">Cocktails</a>
+          </h1>
       </header>
       <main>
+      <input type='radio' onClick={() => setGinClicked(current => !current)} ></input><span>Gin</span>
         <Routes>
           <Route path='/' element={<Search />} />
-          <Route path='/drinks/:id' element={<Drinks />} />
-          <Route path='/drinks/:id/details/:idx' element={ <DrinkDetails /> } />
+          <Route path='/drinks/:id' element={ <DrinkDetails /> } />
         </Routes>
       </main>
-    </>
+    </div>
   );
 }
 
