@@ -13,16 +13,23 @@ console.log(props.spirit)
 
 
 return (
-      <section className="container">
+      <section className="ingredientContainer">
 
-{props.spirit.map((search,searchIdx) => {
+            {props.spirit.map((search,searchIdx) => {
 
-  return <Link to={`/drinks/${search.strIngredient1}`} key={searchIdx}> 
-         <h4 className='ingredients'>{search.strIngredient1}</h4>
-      </Link>
- })} 
+                  return (
+                        <Link to={`/drinks/${search.strIngredient1}`} key={searchIdx} className='ingredientCard'>
+                              <div>
+                                    <img width={150} src={`https://www.thecocktaildb.com/images/ingredients/${search.strIngredient1}.png`} ></img>
+                              </div>
+                              <div>
+                                    <h4>{search.strIngredient1}</h4>
+                              </div>
+                        </Link>
+                        )
+            })} 
       </section>
-)
+      )
 }
 export default Search
 

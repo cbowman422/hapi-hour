@@ -29,14 +29,12 @@ const DrinkList = (props) => {
         return (
 
           <Link to={`/drinks/:id/drinks-details/${drinkListMap.idDrink}`} key={drinkListIdx} className='componentCSS'>
-    
             <div>        
               <img width={150} src={drinkListMap.strDrinkThumb}></img>
             </div>
             <div className="cardTitle">
               {drinkListMap.strDrink}
             </div>
-
           </Link>
                )
           })} 
