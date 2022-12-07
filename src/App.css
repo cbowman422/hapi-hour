@@ -29,6 +29,7 @@ header a {
   width: 150px;
   margin: 10px;
   padding: 10px;
+  text-decoration: none;
 }
 .componentCSS img {
   display: flex;
@@ -43,7 +44,6 @@ header a {
   height: 50px;
   font-size: 16px;
   text-align: left;
-
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 .navBarSide{
@@ -69,6 +69,20 @@ header a {
   grid-template-rows: 1fr;
   grid-column-gap: 0px;
   grid-row-gap: 0px;
+}
+
+.details-container {
+  background-color: #404040;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  width: 90%;
+  margin-left: 5px;
+}
+.detailList{
+  list-style-type: none;
+}
+.detailItems{
+  margin: 35px 0 0 10px;
+  padding: 5px;
 }
 
 /* Nav Bar CSS */
