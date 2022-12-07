@@ -10,6 +10,15 @@ import RandomDrink from './components/RandomDrink';
 
 function App() {
 
+  const [searchBarItem, setSearchBarItem] = useState('')
+
+
+  const handleItemChange = (e) => {
+    const newSearchItem = e.target.value
+    setTodoItem(newSearchItem)
+    
+    console.log(e)
+  }
 
   const [spiritList, setSpiritList] = useState([])
 
@@ -33,7 +42,7 @@ return (
     <header className="header" id="sticky">
           <h1>
             <a href="/">Cocktails</a>
-            <input type="text" id="myInput" /> 
+            <input type="text" id="myInput" value={searchBarItem}/> 
             <RandomDrink />
           </h1>
     </header>
