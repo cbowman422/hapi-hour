@@ -27,7 +27,7 @@ return ( spiritList ?
   <div>
     <header className="header">
         <h1>
-          <a href="/">Cocktails</a>
+          <a href="/">COCKTAILS</a>
         </h1>
     </header>
     <div className='homeContainer'>
