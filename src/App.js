@@ -35,7 +35,6 @@ return (
             <a href="/">Cocktails</a>
             <input type="text" id="myInput" /> 
             <RandomDrink />
-            
           </h1>
     </header>
  
@@ -43,7 +42,7 @@ return (
         <Routes>
           <Route path='/' element={<Search spirit={spiritList}/>} />
           <Route path='/drinks/:id' element={<DrinkList />} />
-          <Route path='/drinks/:id/drinks-details/:idd' element={ <DrinkDetails /> } />
+          <Route path='/drinks-details/:idd' element={ <DrinkDetails /> } />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </div>

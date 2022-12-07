@@ -16,7 +16,7 @@ const RandomDrink = () => {
           setRandomDrink(json)
         })
         .catch(console.error) 
-      }, []);
+      });
 
 
 
@@ -27,18 +27,14 @@ const RandomDrink = () => {
       {randomDrink.drinks.map((randomDrinkMap,randomDrinkIdx) => {
      return (
 
-    <div className='container' key={randomDrinkIdx}>
-      <p>
-      <Link to={`/drinks/:id/drinks-details/${randomDrinkMap.idDrink}`} > Randomize!
+    <div className='random' key={randomDrinkIdx}>
+      <Link to={`/drinks-details/${randomDrinkMap.idDrink}`} > Randomize!
       </Link>
-      </p>
     </div>
 
      )
     })} 
     </div>
-
-
       :
     <p> loading .. </p>
   )

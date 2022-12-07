@@ -26,7 +26,7 @@ const DrinkList = (props) => {
       {drinkList.drinks.map((drinkListMap,drinkListIdx) => {
         return (
 
-          <Link to={`/drinks/:id/drinks-details/${drinkListMap.idDrink}`} key={drinkListIdx} className='componentCSS'>
+          <Link to={`/drinks-details/${drinkListMap.idDrink}`} key={drinkListIdx} className='componentCSS'>
     
             <div>        
               <img width={150} src={drinkListMap.strDrinkThumb}></img>

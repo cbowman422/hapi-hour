@@ -30,7 +30,7 @@ const NotFound = () => {
     <div className='container' key={notFoundIdx}>
       <h1>404 - Not Found</h1>
       <h1>
-      <Link to={`/drinks/:id/drinks-details/${notFoundMap.idDrink}`} > Try this random Cocktail!
+      <Link to={`/drinks-details/${notFoundMap.idDrink}`} > Try this random Cocktail!
       </Link>
       </h1>
     </div>
