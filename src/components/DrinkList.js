@@ -16,7 +16,6 @@ const DrinkList = (props) => {
         .then((response) => response.json())
         .then((json) => {
           setDrinkList(json)
-          console.log(url)
         })
         .catch(console.error) 
       }, []);

@@ -9,9 +9,6 @@ import { useParams } from 'react-router-dom'
 const Search = (props) => {
   
 
-console.log(props.spirit)
-
-
 return (
       <section className="container">
 
@@ -19,6 +16,7 @@ return (
 
   return <Link to={`/drinks/${search.strIngredient1}`} key={searchIdx}> 
          <h4>{search.strIngredient1}</h4>
+         <img width={150} src={`https://www.thecocktaildb.com/images/ingredients/${search.strIngredient1}.png`} ></img>
       </Link>
  })} 
       </section>

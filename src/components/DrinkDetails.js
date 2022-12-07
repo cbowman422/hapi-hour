@@ -15,7 +15,6 @@ const DrinkDetails = () => {
       .then((res) => res.json())
       .then((json) => {
           setDrinkDetail(json)
-          console.log(url)
       })
       .catch(console.error)
   }, []);
