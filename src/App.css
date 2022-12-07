@@ -21,47 +21,7 @@ header a {
   color:	#c5aa6a;
   text-decoration: none;
 }
-.componentCSS {
-  display: inline-block;
-  border-radius: 5px;
-  min-height: 150px;
-  min-width: 150px;
-  width: 150px;
-  margin: 10px;
-  padding: 10px;
-  text-decoration: none;
-}
-.componentCSS img {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.cardTitle {
-  background-color: 	#404040;
-  color: #c5aa6a;
-  font-weight: bold;
-  padding: 5px;
-  height: 50px;
-  font-size: 16px;
-  text-align: left;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-}
-.componentCSS img {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.cardTitle {
-  background-color: 	#404040;
-  color: #c5aa6a;
-  font-weight: bold;
-  padding: 5px;
-  height: 50px;
-  font-size: 16px;
-  text-align: left;
 
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-}
 .navBarSide{
   width: 150px;
   background-color: 	#5f4c4c;
@@ -86,16 +46,6 @@ header a {
   grid-column-gap: 0px;
   grid-row-gap: 0px; */
 }
-
-.detailList{
-  list-style: none;
-}
-
-.details-container{
-background: #4c3c3c;
-padding: 15px;
-}
-
 .details-container {
   background-color: #404040;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -114,10 +64,39 @@ padding: 15px;
 
 
 /* Nav Bar CSS */
+.ingredients {
+  display: inline-block;
+  text-decoration: none;
+  color:	#c5aa6a;
+}
 
 
 /* Cocktails Page CSS */
-
+.componentCSS {
+  display: inline-block;
+  border-radius: 5px;
+  min-height: 150px;
+  min-width: 150px;
+  width: 150px;
+  margin: 10px;
+  padding: 10px;
+  text-decoration: none;
+}
+.componentCSS img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cardTitle {
+  background-color:#404040;
+  color: #c5aa6a;
+  font-weight: bold;
+  padding: 5px;
+  height: 50px;
+  font-size: 16px;
+  text-align: left;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
 
 /* Details Page CSS */
 

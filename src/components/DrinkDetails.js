@@ -30,7 +30,7 @@ const DrinkDetails = () => {
           <div key={idx}>
             <h3>{detailsMap.strDrink}</h3>
             <img width={150} src={detailsMap.strDrinkThumb}></img>
-            <h4>Glass Type:</h4> <p>{detailsMap.strGlass}</p>
+            <h4>Preferred Glass:</h4><p>{detailsMap.strGlass}</p>
             <h4>Ingredients:</h4>
             <ul>
               <li className="detailList">{detailsMap.strIngredient1}</li>

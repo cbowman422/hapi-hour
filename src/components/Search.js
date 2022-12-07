@@ -18,7 +18,7 @@ return (
 {props.spirit.map((search,searchIdx) => {
 
   return <Link to={`/drinks/${search.strIngredient1}`} key={searchIdx}> 
-         <h4>{search.strIngredient1}</h4>
+         <h4 className='ingredients'>{search.strIngredient1}</h4>
       </Link>
  })} 
       </section>

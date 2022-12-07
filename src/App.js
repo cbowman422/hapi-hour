@@ -7,16 +7,6 @@ import { useState, useEffect } from 'react';
 import DrinkList from './components/DrinkList';
 
 function App() {
-  const [filter, setFilter] = useState([]);
-  useEffect(() => {
-    const url = "http://www.thecocktaildb.com/api/json/v1/1/list.php?i=list";
-    fetch(url)
-    .then((response) => response.json())
-    .then((json) => {
-      setFilter(json)
-  })
-  .catch(console.error) 
-}, []);
 
 
   const [spiritList, setSpiritList] = useState([])
@@ -33,7 +23,7 @@ function App() {
   }, []);
 
 
-return ( filter ?
+return ( spiritList ?
   <div>
     <main className="container">
  
