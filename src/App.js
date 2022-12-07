@@ -30,8 +30,8 @@ return ( spiritList ?
     <header className="header">
         <h1>
           <a href="/">COCKTAILS</a>
-          <input type="text" id="myInput" /> 
-            <RandomDrink />
+          <span><input type="text" id="myInput" /> 
+            <RandomDrink /></span>
         </h1>
     </header>
     <div className='homeContainer'>
