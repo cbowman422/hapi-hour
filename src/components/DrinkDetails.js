@@ -4,13 +4,13 @@ import { useParams } from 'react-router';
 
 const DrinkDetails = () => {
 
-  let { id } = useParams();
+  let { idd } = useParams();
   
 
   const [drinkDetail, setDrinkDetail] = useState(null)
 
   useEffect(() => {
-      const url = `https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${id}`;
+      const url = `https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${idd}`;
       fetch(url)
       .then((res) => res.json())
       .then((json) => {

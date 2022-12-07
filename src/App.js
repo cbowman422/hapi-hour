@@ -4,11 +4,11 @@ import Search from './components/Search';
 import { Route, Routes } from 'react-router-dom'
 import './App.css';
 import { useState, useEffect } from 'react';
-import Sticky from 'react-stickynode';
+import DrinkList from './components/DrinkList';
 
 function App() {
 
-  const [ginClicked, setGinClicked] = useState(false);
+
   const [spiritList, setSpiritList] = useState([])
 
   useEffect(() => {
@@ -27,20 +27,12 @@ function App() {
 return (
   <div>
     <main className="container">
-      <Sticky top={70}>
-      <ul className="navBarSide">
-        <p>Filters:</p>
-        <li> <input type='checkbox' onClick={() => setGinClicked(current => !current)} ></input><span>Gin</span>
-        </li>  
-      </ul>
-      </Sticky>
+ 
       <div>
         <Routes>
-        {spiritList.map((ginMap,idx) => {
-         
-        })} 
-          <Route path='/' element={<Search ginProp={ginClicked}/>} />
-          <Route path='/drinks/:id' element={ <DrinkDetails /> } />
+          <Route path='/' element={<Search spirit={spiritList}/>} />
+          <Route path='/drinks/:id' element={<DrinkList />} />
+          <Route path='/drinks/:id/drinks-details/:idd' element={ <DrinkDetails /> } />
         </Routes>
       </div>
     </main>

@@ -3,20 +3,20 @@ import {useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { useParams } from 'react-router-dom'
 
-const DrinkList = () => {
+const DrinkList = (props) => {
+
+    let { id } = useParams();
 
     const [drinkList , setDrinkList] = useState(null)
 
-    let { idz } = useParams();
-  
 
     useEffect(() => {
-        const url = `https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${idz}`;
+        const url = `https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${id}`;
         fetch(url)
         .then((response) => response.json())
         .then((json) => {
           setDrinkList(json)
-          console.log(url)
+          
         })
         .catch(console.error) 
       }, []);
@@ -24,11 +24,11 @@ const DrinkList = () => {
 
   return ( drinkList ?
 
-    <div>
+    <div> heh
       {DrinkList.drinks.map((drinkListMap,idx) => {
         return (
 
-          <Link to={`/drinks/${drinkListMap.idDrink}`} key={idx} className='componentCSS'>
+          <Link to={`/drinks/:idd/drink-details/${drinkListMap.idDrink}`} key={idx} className='componentCSS'>
     
             <div>        
               <img width={150} src={drinkListMap.strDrinkThumb}></img>
