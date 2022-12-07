@@ -14,7 +14,7 @@ console.log(props.spirit)
 
 return (
       <section className="ingredientContainer">
-
+            <h1 className='ingredientHeader'>Choose Your Ingredient</h1>
             {props.spirit.map((search,searchIdx) => {
 
                   return (

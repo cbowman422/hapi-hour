@@ -25,8 +25,13 @@ function App() {
 
 return ( spiritList ?
   <div>
+    <header className="header">
+        <h1>
+          <a href="/">Cocktails</a>
+        </h1>
+    </header>
+    <img src='https://imgur.com/jFROHy1.jpg'/>
     <main className="container">
-      <img src='./images/barImage.jpg' className=''/>
       <div>
         <Routes>
           <Route path='/' element={<Search spirit={spiritList}/>} />

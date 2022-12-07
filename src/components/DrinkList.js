@@ -3,6 +3,7 @@ import {useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { useParams } from 'react-router-dom'
 
+
 const DrinkList = (props) => {
 
     let { id } = useParams();
@@ -25,6 +26,7 @@ const DrinkList = (props) => {
   return ( drinkList ?
 
     <div>
+      <h1 className='ingredientHeader'>Choose Your Cocktail</h1>
       {drinkList.drinks.map((drinkListMap,drinkListIdx) => {
         return (
 
