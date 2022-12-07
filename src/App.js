@@ -6,6 +6,7 @@ import './App.css';
 import { useState, useEffect } from 'react';
 import DrinkList from './components/DrinkList';
 import NotFound from './components/NotFound';
+import RandomDrink from './components/RandomDrink';
 
 function App() {
 
@@ -28,6 +29,15 @@ function App() {
 return (
   <div>
     <main className="container">
+
+    <header className="header" id="sticky">
+          <h1>
+            <a href="/">Cocktails</a>
+            <input type="text" id="myInput" /> 
+            <RandomDrink />
+            
+          </h1>
+    </header>
  
       <div>
         <Routes>
