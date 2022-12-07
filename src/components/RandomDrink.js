@@ -40,7 +40,7 @@ function refreshPage(){
     })} 
     </div>
       :
-    <p> loading .. </p>
+    <p>  </p>
   )
 }
 
