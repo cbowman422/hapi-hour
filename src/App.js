@@ -13,12 +13,12 @@ function App() {
   const [searchBarItem, setSearchBarItem] = useState('')
 
 
-  const handleItemChange = (e) => {
-    const newSearchItem = e.target.value
-    setTodoItem(newSearchItem)
+  // const handleItemChange = (e) => {
+  //   const newSearchItem = e.target.value
+  //   setTodoItem(newSearchItem)
     
-    console.log(e)
-  }
+  //   console.log(e)
+  // }
 
   const [spiritList, setSpiritList] = useState([])
 
