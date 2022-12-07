@@ -7,6 +7,7 @@ import { useState, useEffect } from 'react';
 import DrinkList from './components/DrinkList';
 import NotFound from './components/NotFound';
 import RandomDrink from './components/RandomDrink';
+import Home from './components/Home';
 
 function App() {
 
@@ -36,23 +37,20 @@ function App() {
 
 return ( spiritList ?
   <div>
-    <main className="container">
-
     <header className="header" id="sticky">
           <h1>
-            <a href="/">Cocktails</a>
-            <input type="text" id="myInput" value={searchBarItem}/> 
+            <a href="/search/">COCKTAILS</a>
+            <input type="text" id="myInput"/> 
             <RandomDrink />
         </h1>
     </header>
-    <div className='homeContainer'>
-      <img src='https://imgur.com/jFROHy1.jpg'/>
-      <h1>WELCOME</h1>
-    </div>
+
+  
     <main className="container">
       <div>
         <Routes>
-          <Route path='/' element={<Search spirit={spiritList}/>} />
+          <Route path='/' element={<Home spirit={spiritList}/>} />
+          <Route path='/search/' element={<Search spirit={spiritList}/>} />
           <Route path='/drinks/:id' element={<DrinkList />} />
           <Route path='/drinks-details/:idd' element={ <DrinkDetails /> } />
           <Route path="*" element={<NotFound />} />
