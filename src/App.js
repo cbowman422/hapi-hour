@@ -3,30 +3,42 @@ import DrinkDetails from './components/DrinkDetails';
 import Search from './components/Search';
 import { Route, Routes } from 'react-router-dom'
 import './App.css';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import DrinkList from './components/DrinkList';
 
 function App() {
 
-const [ginClicked, setGinClicked] = useState(false);
-const [vodkaClicked, setVodkaClicked] = useState(false);
+
+  const [spiritList, setSpiritList] = useState([])
+
+  useEffect(() => {
+    const url = "https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list";
+    fetch(url)
+    .then((response) => response.json())
+    .then((json) => {
+      setSpiritList(json.drinks)
+     
+    })
+    .catch(console.error) 
+  }, []);
 
 
-  return (
-    <div>
-      <main>
-        <div className="navBarSide">
-      <input type='radio' onClick={() => setGinClicked(current => !current)} ></input><span>Gin</span>
-        </div>
-        <div className="navBarSide">   
-      <input type='radio' onClick={() => setVodkaClicked(current => !current)} ></input><span>Vodka</span>
-        </div> 
+
+return (
+  <div>
+    <main className="container">
+ 
+      <div>
         <Routes>
-          <Route path='/' element={<Search ginProp={ginClicked} vodkaProp={vodkaClicked}/>} />
-          <Route path='/drinks/:id' element={ <DrinkDetails /> } />
+          <Route path='/' element={<Search spirit={spiritList}/>} />
+          <Route path='/drinks/:id' element={<DrinkList />} />
+          <Route path='/drinks/:id/drinks-details/:idd' element={ <DrinkDetails /> } />
         </Routes>
-      </main>
-    </div>
-  );
+      </div>
+    </main>
+  </div>
+);
 }
-
 export default App;
+
+
