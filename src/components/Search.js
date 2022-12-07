@@ -1,16 +1,10 @@
-import { render } from '@testing-library/react'
 import React from 'react'
-import DrinkList from './DrinkList'
-import {useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import { useParams } from 'react-router-dom'
+
 
 
 const Search = (props) => {
   
-
-console.log(props.spirit)
-
 
 return (
       <section className="ingredientContainer">

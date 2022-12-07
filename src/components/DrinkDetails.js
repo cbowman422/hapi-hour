@@ -2,6 +2,7 @@ import React from 'react'
 import {useState, useEffect} from 'react';
 import { useParams } from 'react-router';
 
+
 const DrinkDetails = () => {
 
   let { idd } = useParams();
@@ -15,7 +16,6 @@ const DrinkDetails = () => {
       .then((res) => res.json())
       .then((json) => {
           setDrinkDetail(json)
-          console.log(url)
       })
       .catch(console.error)
   }, []);
@@ -28,6 +28,7 @@ const DrinkDetails = () => {
             {drinkDetail.drinks.map((detailsMap,idx) => {
             return (
           <div key={idx}>
+            <a href={`/drinks/${detailsMap.strIngredient1}`}>Back to {detailsMap.strIngredient1}</a>
             <h3 className='drinkTitle'>{detailsMap.strDrink}</h3>
             <img width={150} src={detailsMap.strDrinkThumb}></img>
             <div className='drinkGlass'>

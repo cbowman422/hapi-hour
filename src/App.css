@@ -3,7 +3,7 @@
 }
 header {
   background: rgb(47,38,38);
-  height: 50px;
+  height: 80px;
   position: sticky;
   top: 0;
   z-index: 1;
@@ -95,10 +95,12 @@ header a {
   padding: 5px;
   text-decoration: none;
 }
-.componentCSS img {
+.ingredientCard img{
+  background-color: white;
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 150px;
 }
 .cardTitle {
   background-color:#404040;
