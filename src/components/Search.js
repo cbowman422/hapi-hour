@@ -1,6 +1,6 @@
 import { render } from '@testing-library/react'
 import React from 'react'
-import Gin from './Gin'
+import DrinkList from './DrinkList'
 
 
 const Search = (props) => {
@@ -12,7 +12,7 @@ const Search = (props) => {
       return (
             <>
                   <div>
-                  <Gin />
+                  <DrinkList />
                   </div> 
             </>
             )

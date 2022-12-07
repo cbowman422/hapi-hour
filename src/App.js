@@ -16,7 +16,8 @@ function App() {
     fetch(url)
     .then((response) => response.json())
     .then((json) => {
-      setSpiritList(json)
+      setSpiritList(json.drinks)
+     
     })
     .catch(console.error) 
   }, []);
@@ -35,6 +36,9 @@ return (
       </Sticky>
       <div>
         <Routes>
+        {spiritList.map((ginMap,idx) => {
+         
+        })} 
           <Route path='/' element={<Search ginProp={ginClicked}/>} />
           <Route path='/drinks/:id' element={ <DrinkDetails /> } />
         </Routes>
