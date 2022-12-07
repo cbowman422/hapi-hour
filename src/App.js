@@ -5,6 +5,7 @@ import { Route, Routes } from 'react-router-dom'
 import './App.css';
 import { useState, useEffect } from 'react';
 import DrinkList from './components/DrinkList';
+import NotFound from './components/NotFound';
 
 function App() {
 
@@ -33,6 +34,7 @@ return (
           <Route path='/' element={<Search spirit={spiritList}/>} />
           <Route path='/drinks/:id' element={<DrinkList />} />
           <Route path='/drinks/:id/drinks-details/:idd' element={ <DrinkDetails /> } />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </div>
     </main>
