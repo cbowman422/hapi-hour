@@ -1,43 +1,29 @@
 import { render } from '@testing-library/react'
 import React from 'react'
-import Filters from './Filters'
-import Vodka from './Vodka'
+import DrinkList from './DrinkList'
+import {useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
+
 
 const Search = (props) => {
   
 
+console.log(props.spirit)
 
-  
- if (props.ginProp && !props.vodkaProp) {
-      return (
-            <>
-                  <div>
-                  <Filters/>
-                  </div> 
-            </>
-            )
-  }
-  if (props.vodkaProp && !props.ginProp){
-      return (
-            <>
-                  <div>
-                  <Vodka />
-                  </div> 
-            </>
-            )
-  }
-  if (props.ginProp && props.vodkaProp){
-      return (
-            <>
-                  <div>
-                  <Filters />
-                  <Vodka />
-                  </div> 
-            </>
-            )
-  }
+
+return (
+      <section className="container">
+
+{props.spirit.map((search,searchIdx) => {
+
+  return <Link to={`/drinks/${search.strIngredient1}`} key={searchIdx}> 
+         <h4>{search.strIngredient1}</h4>
+      </Link>
+ })} 
+      </section>
+)
 }
-
 export default Search
 
 

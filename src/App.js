@@ -4,8 +4,7 @@ import Search from './components/Search';
 import { Route, Routes } from 'react-router-dom'
 import './App.css';
 import { useState, useEffect } from 'react';
-import Sticky from 'react-stickynode';
-import Filters from './components/Filters';
+import DrinkList from './components/DrinkList';
 
 function App() {
   const [filter, setFilter] = useState([]);
@@ -19,37 +18,30 @@ function App() {
   .catch(console.error) 
 }, []);
 
-const filterState = {
-  Gin: false,
-  Vodka: false,
-}
 
-const [ginClicked, setGinClicked] = useState(filterState.Gin);
-const [vodkaClicked, setVodkaClicked] = useState(filterState.Vodka);
+  const [spiritList, setSpiritList] = useState([])
+
+  useEffect(() => {
+    const url = "https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list";
+    fetch(url)
+    .then((response) => response.json())
+    .then((json) => {
+      setSpiritList(json.drinks)
+     
+    })
+    .catch(console.error) 
+  }, []);
+
 
 return ( filter ?
   <div>
     <main className="container">
-      <Sticky top={70}>
-        <ul className="navBarSide">
-          <label><p>Filters:</p></label>
-          <li> <input type='checkbox' onClick={() => setGinClicked(current => !current)} ></input><span>Gin</span>
-          </li>
-          <li> <input type='checkbox' onClick={() => setVodkaClicked(current => !current)} ></input><span>Vodka</span>
-          </li>
-        </ul>
-      </Sticky>
+ 
       <div>
         <Routes>
-          {/* {filter.drinks.map((items) => {
-              return ( 
-                <Route path={`/:${items.strIngredient1}`} element={<Filters key={items.strIngredient1}/>} />
-              )
-            })
-          } */}
-          <Route path='/' element={<Search ginProp={ginClicked} vodkaProp={vodkaClicked}/>} />
-          <Route path='/drinks/:id' element={ <DrinkDetails /> } />
-          <Route path='/:id' element={ <Filters /> } />
+          <Route path='/' element={<Search spirit={spiritList}/>} />
+          <Route path='/drinks/:id' element={<DrinkList />} />
+          <Route path='/drinks/:id/drinks-details/:idd' element={ <DrinkDetails /> } />
         </Routes>
       </div>
     </main>
@@ -59,3 +51,5 @@ return ( filter ?
 );
 }
 export default App;
+
+
