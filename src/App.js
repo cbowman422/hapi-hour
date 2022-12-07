@@ -38,11 +38,15 @@ function App() {
 return ( spiritList ?
   <div>
     <header className="header" id="sticky">
-          <h1>
-            <a href="/search/">COCKTAILS</a>
-            <input type="text" id="myInput"/> 
-            <RandomDrink />
-        </h1>
+        <div>
+          <RandomDrink />
+        </div>
+        <div>
+          <a href="/search/">COCKTAILS</a>
+        </div>
+        <div>
+          <input type="text" id="myInput"/>
+        </div>
     </header>
 
   

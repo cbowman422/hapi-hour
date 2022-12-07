@@ -8,12 +8,12 @@ const Home = (props) => {
 
 return (
       <section className="ingredientContainer">
-          <div className='homeContainer'>
-      <img src='https://imgur.com/jFROHy1.jpg'/>
-      <h1>WELCOME</h1>
-        </div>
+            <div className='homeContainer'>
+                  <img src='https://imgur.com/jFROHy1.jpg'/>
+                  <h1>WELCOME</h1>
+            </div>
 
-            <h1 className='ingredientHeader'>Choose Your Ingredient</h1>
+            <h1 className='ingredientHeader'>Base Ingredients</h1>
             {props.spirit.map((search,searchIdx) => {
                   return (
                         <Link to={`/drinks/${search.strIngredient1}`} key={searchIdx} className='ingredientCard'>

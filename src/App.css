@@ -1,19 +1,16 @@
-.App {
-  text-align: center;
-}
-header {
+.header {
+  font-family: 'Maven Pro', sans-serif;
+  font-size: 36px;
+  margin: 0;
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
   background: rgb(47,38,38);
-  height: 80px;
+  height: 50px;
   position: sticky;
   top: 0;
   z-index: 1;
   width: 100%;
-}
-h1 {
-  font-family: 'Maven Pro', sans-serif;
-  font-weight: 300;
-  margin: 0;
-  display: inline-block;
 }
 header a {
   margin-left: 5px;
@@ -28,29 +25,35 @@ header a {
   color: #c5aa6a;
 }
 .homeContainer{
-  width: 100vw;
+  width: 100%;
   background: rgba(54, 54, 54, 0.7);
   overflow: hidden;
 }
 .homeContainer h1 {
   color: whitesmoke;
+  margin: 0;
   font-size: 128px;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
+.homeContainer img {
+  height: 800px;
+  width: 100%;
+}
 
 /* Nav Ingredients CSS */
 .ingredientHeader {
   display: flex;
   justify-content: center;
-  background-color: #404040;
+  background-color: #2f2626;
   color: #c5aa6a;
   font-size: 48px;
   margin-top: -5px;
   height: 60px;
   position: relative;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 .ingredientCard{
   display: inline-block;
