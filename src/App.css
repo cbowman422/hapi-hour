@@ -20,25 +20,25 @@ header a {
   color:	#c5aa6a;
   text-decoration: none;
 }
-.details-container {
-  background-color: #404040;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  width: 90%;
-  margin-left: 5px;
-}
-.detailList{
-  list-style-type: none;
-}
-.detailItems{
-  margin: 35px 0 0 10px;
-  padding: 5px;
-}
 
 /* Home Page CSS */
 .container{
   display: grid;
   font-family: 'Maven Pro', sans-serif;
   color: #c5aa6a;
+}
+.homeContainer{
+  width: 100vw;
+  background: rgba(54, 54, 54, 0.7);
+  overflow: hidden;
+}
+.homeContainer h1 {
+  color: whitesmoke;
+  font-size: 128px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 /* Nav Ingredients CSS */
@@ -47,7 +47,10 @@ header a {
   justify-content: center;
   background-color: #404040;
   color: #c5aa6a;
+  font-size: 48px;
   margin-top: -5px;
+  height: 60px;
+  position: relative;
 }
 .ingredientCard{
   display: inline-block;
@@ -81,7 +84,9 @@ header a {
 
 /* Cocktails Page CSS */
 .componentCSS {
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border-radius: 5px;
   min-height: 150px;
   min-width: 150px;
@@ -108,5 +113,39 @@ header a {
 }
 
 /* Details Page CSS */
-
-
+.details-container {
+  background-color: #404040;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  width: 90%;
+  margin-left: 20px;
+  padding: 10px;
+}
+.details-container img {
+  margin-left: 20px;
+}
+.detailList{
+  list-style-type: none;
+}
+.detailItems{
+  margin: 35px 0 0 10px;
+  padding: 5px;
+}
+.mixingInstructions {
+  background-color: #5f4c4c;
+  margin-left: 20px;
+  padding: 5px;
+}
+.drinkTitle{
+  background-color: #5f4c4c;
+  margin-left: 20px;
+  padding: 5px;
+}
+.drinkGlass {
+  background-color: #5f4c4c;
+  margin-left: 20px;
+  padding: 5px;
+}
+.ingredientList{
+  background-color: #5f4c4c;
+  margin-left: 20px;
+}

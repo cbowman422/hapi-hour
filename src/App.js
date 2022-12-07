@@ -30,7 +30,10 @@ return ( spiritList ?
           <a href="/">Cocktails</a>
         </h1>
     </header>
-    <img src='https://imgur.com/jFROHy1.jpg'/>
+    <div className='homeContainer'>
+      <img src='https://imgur.com/jFROHy1.jpg'/>
+      <h1>WELCOME</h1>
+    </div>
     <main className="container">
       <div>
         <Routes>
