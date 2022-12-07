@@ -10,7 +10,6 @@ return (
       <section className="ingredientContainer">
             <h1 className='ingredientHeader'>Choose Your Ingredient</h1>
             {props.spirit.map((search,searchIdx) => {
-
                   return (
                         <Link to={`/drinks/${search.strIngredient1}`} key={searchIdx} className='ingredientCard'>
                               <div>
