@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react'
 
 const RandomDrink = () => {
 
-
+        
 
     const [randomDrink , setRandomDrink] = useState(null)
     
@@ -18,8 +18,12 @@ const RandomDrink = () => {
         .catch(console.error) 
       });
 
-
-
+function refreshPage(){
+      setTimeout(function() {
+        window.location.reload();
+         }, 1);
+        }
+       
 
   return ( randomDrink ?
 
@@ -28,7 +32,7 @@ const RandomDrink = () => {
      return (
 
     <div className='random' key={randomDrinkIdx}>
-      <Link to={`/drinks-details/${randomDrinkMap.idDrink}`} > Randomize!
+      <Link to={`/drinks-details/${randomDrinkMap.idDrink}`} onClick={refreshPage} > Randomize!
       </Link>
     </div>
 
