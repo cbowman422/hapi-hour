@@ -8,7 +8,10 @@ const DrinkList = (props) => {
     let { id } = useParams();
 
     const [drinkList , setDrinkList] = useState(null)
+    
 
+    // const scrollToHeader = () => {
+    //   document.querySelector("#sticky").innerHTML="woo";  }  
 
     useEffect(() => {
         const url = `https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${id}`;

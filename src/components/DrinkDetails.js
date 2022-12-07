@@ -27,6 +27,7 @@ const DrinkDetails = () => {
             {drinkDetail.drinks.map((detailsMap,idx) => {
             return (
           <div key={idx}>
+            <a href={`/drinks/${detailsMap.strIngredient1}`}>Back to {detailsMap.strIngredient1}</a>
             <h3>{detailsMap.strDrink}</h3>
             <img width={150} src={detailsMap.strDrinkThumb}></img>
             <h4>Glass Type:</h4> <p>{detailsMap.strGlass}</p>
