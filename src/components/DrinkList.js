@@ -16,7 +16,7 @@ const DrinkList = (props) => {
         .then((response) => response.json())
         .then((json) => {
           setDrinkList(json)
-          
+          console.log(url)
         })
         .catch(console.error) 
       }, []);
@@ -24,8 +24,8 @@ const DrinkList = (props) => {
 
   return ( drinkList ?
 
-    <div> heh
-      {DrinkList.drinks.map((drinkListMap,idx) => {
+    <div>
+      {drinkList.drinks.map((drinkListMap,idx) => {
         return (
 
           <Link to={`/drinks/:idd/drink-details/${drinkListMap.idDrink}`} key={idx} className='componentCSS'>
@@ -43,7 +43,7 @@ const DrinkList = (props) => {
     </div>
       :
     <p> loading .. </p>
-)
+      );
 }
 
 export default DrinkList
