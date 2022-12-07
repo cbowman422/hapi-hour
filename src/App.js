@@ -25,19 +25,20 @@ function App() {
   }, []);
 
 
-
-return (
+return ( spiritList ?
   <div>
-    <main className="container">
-
-    <header className="header" id="sticky">
-          <h1>
-            <a href="/">Cocktails</a>
-            <input type="text" id="myInput" /> 
+    <header className="header">
+        <h1>
+          <a href="/">COCKTAILS</a>
+          <input type="text" id="myInput" /> 
             <RandomDrink />
-          </h1>
+        </h1>
     </header>
- 
+    <div className='homeContainer'>
+      <img src='https://imgur.com/jFROHy1.jpg'/>
+      <h1>WELCOME</h1>
+    </div>
+    <main className="container">
       <div>
         <Routes>
           <Route path='/' element={<Search spirit={spiritList}/>} />
@@ -48,6 +49,8 @@ return (
       </div>
     </main>
   </div>
+  :
+  <p> loading .. </p>
 );
 }
 export default App;
