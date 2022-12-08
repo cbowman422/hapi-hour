@@ -48,13 +48,16 @@ function App() {
   }, []);
  
 
-
 return ( spiritList ?
   <div>
     <header className="header" id="sticky">
-          <h1>
-            <a href="/search/">COCKTAILS</a>
-            <input type="text" id="myInput" value={searchBarItem} onChange={handleItemChange} placeholder="Search Drink Name's" /> 
+        <div className='randomDrinkBtn'>
+          <RandomDrink />
+        </div>
+        <div className='pageTitle'>
+          <a href="/search">The Rabbit Hole</a>
+        </div>
+        <input type="text" id="myInput" value={searchBarItem} onChange={handleItemChange} />
              
              <Link to={'/drinks-details/'}> 
               <button onClick={nameClick}> 
@@ -62,11 +65,7 @@ return ( spiritList ?
               </button>
              </Link>
 
-            <RandomDrink />
-        </h1>
     </header>
-
-  
     <main className="container">
       <div>
         <Routes>

@@ -1,24 +1,27 @@
-.App {
-  text-align: center;
-}
-header {
+
+.header {
+  display: flex;
+  font-family: 'Maven Pro', sans-serif;
+  font-size: 32px;
+  margin: 0;
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
   background: rgb(47,38,38);
-  height: 80px;
+  height: 50px;
   position: sticky;
   top: 0;
-  z-index: 1;
+  z-index: 2;
   width: 100%;
 }
-h1 {
-  font-family: 'Maven Pro', sans-serif;
-  font-weight: 300;
-  margin: 0;
-  display: inline-block;
-}
-header a {
-  margin-left: 5px;
+.header a {
+  margin: 10px 0 0 10px;
   color:	#c5aa6a;
   text-decoration: none;
+}
+.header input {
+  height: 16px;
+  margin: 15px 15px 0 0;
 }
 
 /* Home Page CSS */
@@ -28,62 +31,42 @@ header a {
   color: #c5aa6a;
 }
 .homeContainer{
-  width: 100vw;
-  background: rgba(54, 54, 54, 0.7);
+  width: 100%;
+  background: black;
   overflow: hidden;
 }
 .homeContainer h1 {
   color: whitesmoke;
+  margin: 0;
   font-size: 128px;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
-
-/* Nav Ingredients CSS */
-.ingredientHeader {
-  display: flex;
-  justify-content: center;
-  background-color: #404040;
-  color: #c5aa6a;
-  font-size: 48px;
-  margin-top: -5px;
-  height: 60px;
-  position: relative;
+.homeContainer img {
+  height: 950px;
+  width: 100%;
+  opacity: 0.5;
 }
-.ingredientCard{
-  display: inline-block;
-  border-radius: 5px;
-  min-height: 150px;
-  min-width: 150px;
-  width: 150px;
-  margin: 10px;
-  padding: 10px;
+.homeContainer a{
+  display: flex;
+  border: solid;
+  padding: 0px 15px 0px 15px;
+  justify-content: center;
+  align-content: center;
+  color: white;
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
   text-decoration: none;
+  cursor: pointer;
 }
-.ingredientCard img{
-  background-color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 150px;
-}
-.ingredientCard h4{
-  background-color:#404040;
-  color: #c5aa6a;
-  font-weight: bold;
-  padding: 5px;
-  height: 50px;
-  font-size: 16px;
-  text-align: left;
-  margin: auto;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-}
-
 
 /* Cocktails Page CSS */
-.componentCSS {
+/* .componentCSS {
   display: inline-block;
   border-radius: 5px;
   min-height: 150px;
@@ -92,6 +75,7 @@ header a {
   margin: 10px;
   padding: 5px;
   text-decoration: none;
+  margin-left: 50px;
 }
 .componentCSS img{
   background-color: white;
@@ -109,46 +93,4 @@ header a {
   font-size: 16px;
   text-align: left;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-}
-
-/* Details Page CSS */
-.details-container {
-  background-color: #404040;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  width: 90%;
-  margin-left: 20px;
-  padding: 10px;
-}
-.backLink {
-  text-decoration: none;
-  color: #c5aa6a;
-}
-.details-container img {
-  margin-left: 20px;
-}
-.detailList{
-  list-style-type: none;
-}
-.detailItems{
-  margin: 35px 0 0 10px;
-  padding: 5px;
-}
-.mixingInstructions {
-  background-color: #5f4c4c;
-  margin-left: 20px;
-  padding: 5px;
-}
-.drinkTitle{
-  background-color: #5f4c4c;
-  margin-left: 20px;
-  padding: 5px;
-}
-.drinkGlass {
-  background-color: #5f4c4c;
-  margin-left: 20px;
-  padding: 5px;
-}
-.ingredientList{
-  background-color: #5f4c4c;
-  margin-left: 20px;
-}
+}*/
