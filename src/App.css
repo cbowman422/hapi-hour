@@ -59,29 +59,30 @@ header a {
   display: inline-block;
   border-radius: 5px;
   min-height: 150px;
-  min-width: 150px;
-  width: 150px;
+  min-width: 170px;
+  width: 170px;
   margin: 10px;
   padding: 10px;
   text-decoration: none;
 }
 .ingredientCard img{
-  background-color: white;
+  background: #404040;
+  padding: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
   width: 150px;
 }
 .ingredientCard h4{
-  background-color:#404040;
+  background-color: #404040;
   color: #c5aa6a;
   font-weight: bold;
   padding: 5px;
   height: 50px;
   font-size: 16px;
-  text-align: left;
+  text-align: center;
   margin: auto;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
 }
 
 
