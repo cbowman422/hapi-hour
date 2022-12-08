@@ -21,9 +21,12 @@
 .ingredientSection {
   margin-top: 80px;
 }
-/* .drinkList{
-    background-color: #404040;
-} */
+.drinkList{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: space-around;
+}
 
 /* Cocktails Page CSS */
 .componentCSS {

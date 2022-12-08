@@ -17,9 +17,10 @@
     display: flex;
     padding-top: 60px;
     padding: 60px 10px 0 10px;
-    width: 100%;
+    width: 98%;
     min-width: 800px;
     flex-wrap: wrap;
+    justify-content: center;
     align-content: space-around;
   }
   .ingredientCard{
