@@ -54,11 +54,11 @@ return ( spiritList ?
     <header className="header" id="sticky">
           <h1>
             <a href="/search/">COCKTAILS</a>
-            <input type="text" id="myInput" value={searchBarItem} onChange={handleItemChange} /> 
+            <input type="text" id="myInput" value={searchBarItem} onChange={handleItemChange} placeholder="Search Drink Name's" /> 
              
              <Link to={'/drinks-details/'}> 
               <button onClick={nameClick}> 
-               by name
+               search
               </button>
              </Link>
 

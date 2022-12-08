@@ -71,7 +71,7 @@ const DrinkDetails = ({drinkName, isSearch}) => {
 
 
         :
-        <p> loading ..  </p>
+        <p> loading .. try entering a new cocktail.  </p>
     );
 }
 export default DrinkDetails
