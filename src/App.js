@@ -21,6 +21,15 @@ function App() {
 
   const nameClick = () => {
     setIsSearch(current => !current)
+    if (setIsSearch) {
+
+      setTimeout(function() {
+        setIsSearch(current => !current)
+         }, 5);
+
+    } else {
+
+    }
   }
 
   const handleItemChange = (e) => {
@@ -48,7 +57,7 @@ return ( spiritList ?
             <a href="/search/">COCKTAILS</a>
             <input type="text" id="myInput" value={searchBarItem} onChange={handleItemChange} /> 
              
-             <Link to={'/name-details/'}> 
+             <Link to={'/name-search/'}> 
               <button onClick={nameClick}> 
                by name
               </button>
@@ -65,7 +74,7 @@ return ( spiritList ?
           <Route path='/' element={<Search spirit={spiritList}/>} />
           <Route path='/search/' element={<Search spirit={spiritList}/>} />
           <Route path='/drinks/:id' element={ <DrinkList />} />
-          <Route path='/name-details/' element={ <DrinkDetails drinkName={searchBarItem} isSearch={isSearch} /> } />
+          <Route path='/name-search/' element={ <DrinkDetails drinkName={searchBarItem} isSearch={isSearch} /> } />
           <Route path='/drinks-details/:id' element={ <DrinkDetails /> } />
           <Route path="*" element={<NotFound />} />
         </Routes>
