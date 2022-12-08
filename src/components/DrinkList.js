@@ -42,11 +42,34 @@ const DrinkList = (props) => {
               <h2 id='baseIngredients'>{id}</h2>
             </Sticky>
           </div>
+
+
+        <div className='drinkInfo'>
+        {drinkListInfo.ingredients.map((drinkListInfoMap,drinkListInfoIdx) => {
+                            return (
+                          <div key={drinkListInfoIdx}> 
+                          <h2>
+                          {drinkListInfoMap.strIngredient}
+                          </h2>
+                          <h3> ABV:   
+                          {drinkListInfoMap.strABV}%
+                          </h3>
+                          <h3>
+                          {drinkListInfoMap.strDescription}
+                          </h3>
+                          </div>
+                              )
+                            })}
+
+        </div>
+
+
           <div className='ingredientSection'>
             <h2 className='backBox'>
               <a href={`/search`}><i className="backLink"></i>Change Base Ingredient</a>
             </h2>
             <section className='drinkList'>
+
               {drinkList.drinks.map((drinkListMap,drinkListIdx) => {
                 return (
                   <Link to={`/drinks-details/${drinkListMap.idDrink}`} key={drinkListIdx} className='componentCSS'>
@@ -59,22 +82,6 @@ const DrinkList = (props) => {
                   </Link>
                        )
                   })}
-
-                  {drinkListInfo.ingredients.map((drinkListInfoMap,drinkListInfoIdx) => {
-                    return (
-                  <div key={drinkListInfoIdx}> 
-                  <h2>
-                  {drinkListInfoMap.strIngredient}
-                  </h2>
-                  <h3> ABV:   
-                  {drinkListInfoMap.strABV}%
-                  </h3>
-                  <h3>
-                  {drinkListInfoMap.strDescription}
-                  </h3>
-                  </div>
-                      )
-                    })}
 
             </section> 
           </div>
