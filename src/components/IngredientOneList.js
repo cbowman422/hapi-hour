@@ -1,10 +1,10 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import Sticky from 'react-stickynode';
-import "./css/Search.css"
+import "./css/IngredientOneList.css"
 
 
-const Search = (props) => {
+const IngredientOneList = (props) => {
 
       function scrollToList(){
             window.scrollTo({
@@ -62,7 +62,7 @@ const Search = (props) => {
             </>
       )
 }
-export default Search
+export default IngredientOneList
 
 
 

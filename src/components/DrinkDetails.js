@@ -76,7 +76,7 @@ const DrinkDetails = ({drinkName, isSearch}) => {
 
 
         :
-        <p> loading .. try entering a new cocktail.  </p>
+        <p> Cocktail does not match. Try a new one!  </p>
     );
         
 }
