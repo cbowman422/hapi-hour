@@ -6,27 +6,46 @@ import "./css/DrinkList.css"
 import Sticky from 'react-stickynode';
 
 
-const DrinkList = (props) => {
+const DrinkList = ({ingredientName, isSearchIngredient}) => {
+
+
+
 
     let { id } = useParams();
 
     const [drinkList , setDrinkList] = useState(null)
     
+
+     const ingredientUrlDrinkList = `https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${ingredientName}`
+     const drinkNameUrlDrinkList = `https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${id}`
+  
+     const url = isSearchIngredient ? ingredientUrlDrinkList : drinkNameUrlDrinkList
+  
+    
+    //  const url = `https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${id}`;
+
     useEffect(() => {
-        const url = `https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${id}`;
+        
         fetch(url)
         .then((response) => response.json())
         .then((json) => {
           setDrinkList(json)
+          console.log(url)
         })
         .catch(console.error) 
       }, []);
  
       const [drinkListInfo , setDrinkListInfo] = useState(null)
+
     
+      const ingredientUrlInfo = `https://www.thecocktaildb.com/api/json/v1/1/search.php?i=${ingredientName}`
+      const drinkNameUrlInfo = `https://www.thecocktaildb.com/api/json/v1/1/search.php?i=${id}`;
+   
+      const urlInfo = isSearchIngredient ? ingredientUrlInfo : drinkNameUrlInfo
+      
+      // const urlInfo = `https://www.thecocktaildb.com/api/json/v1/1/search.php?i=${id}`;
       useEffect(() => {
-          const url = `https://www.thecocktaildb.com/api/json/v1/1/search.php?i=${id}`;
-          fetch(url)
+          fetch(urlInfo)
           .then((response) => response.json())
           .then((json) => {
             setDrinkListInfo(json)
@@ -45,6 +64,7 @@ const DrinkList = (props) => {
 
 
         <div className='drinkInfo'>
+
         {drinkListInfo.ingredients.map((drinkListInfoMap,drinkListInfoIdx) => {
                             return (
                           <div key={drinkListInfoIdx}> 

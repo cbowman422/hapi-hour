@@ -38,15 +38,15 @@ function App() {
 
   const ingredientClick = () => {
     setIsSearchIngredient(current => !current)
-    if (setIsSearchIngredient) {
+    // if (setIsSearchIngredient) {
 
-      setTimeout(function() {
-        setIsSearchIngredient(current => !current)
-         }, 1);
+    //   setTimeout(function() {
+    //     setIsSearchIngredient(current => !current)
+    //      }, 1);
 
-    } else {
+    // } else {
 
-    }
+    // }
   }
 
   const handleItemChange = (e) => {
@@ -98,7 +98,9 @@ return ( spiritList ?
         <Routes>
           <Route path='/' element={<IngredientOneList spirit={spiritList} visitProp={false}/>} />
           <Route path='/search/' element={<IngredientOneList spirit={spiritList} visitProp={true}/>} />
-          <Route path='/drinks/' element={ <DrinkList ingredientName={searchBarItem}/>} isSearchIngredient={isSearchIngredient} />
+         
+          <Route path='/drinks/' element={ <DrinkList ingredientName={searchBarItem} isSearchIngredient={isSearchIngredient} /> }/>
+          
           <Route path='/drinks/:id' element={ <DrinkList />} />
           <Route path='/drinks-details/' element={ <DrinkDetails drinkName={searchBarItem} isSearch={isSearch} /> } />
           <Route path='/drinks-details/:id' element={ <DrinkDetails /> } />
