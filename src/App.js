@@ -38,19 +38,19 @@ function App() {
 
   const ingredientClick = () => {
     setIsSearchIngredient(current => !current)
-    // if (setIsSearchIngredient) {
+    if (setIsSearchIngredient) {
 
-    //   setTimeout(function() {
-    //     setIsSearchIngredient(current => !current)
-    //      }, 1);
+      setTimeout(function() {
+        setIsSearchIngredient(current => !current)
+         }, 1);
 
-    // } else {
+    } else {
 
-    // }
+    }
   }
 
   const handleItemChange = (e) => {
-    const newSearchItem = e.target.value
+    const newSearchItem = e.target.value.toUpperCase()
     setSearchBarItem(newSearchItem)
     
   }

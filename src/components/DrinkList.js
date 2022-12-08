@@ -14,16 +14,16 @@ const DrinkList = ({ingredientName, isSearchIngredient}) => {
     let { id } = useParams();
 
     const [drinkList , setDrinkList] = useState(null)
-    
-
-     const ingredientUrlDrinkList = `https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${ingredientName}`
-     const drinkNameUrlDrinkList = `https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${id}`
   
-     const url = isSearchIngredient ? ingredientUrlDrinkList : drinkNameUrlDrinkList
+
+    const ingredientUrlDrinkList = `https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${ingredientName}`
+
+    const drinkNameUrlDrinkList = `https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${id}`
+  
+    const url = isSearchIngredient ? ingredientUrlDrinkList : drinkNameUrlDrinkList
   
     
     //  const url = `https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${id}`;
-
     useEffect(() => {
         
         fetch(url)
@@ -35,10 +35,12 @@ const DrinkList = ({ingredientName, isSearchIngredient}) => {
         .catch(console.error) 
       }, []);
  
+
       const [drinkListInfo , setDrinkListInfo] = useState(null)
 
     
       const ingredientUrlInfo = `https://www.thecocktaildb.com/api/json/v1/1/search.php?i=${ingredientName}`
+
       const drinkNameUrlInfo = `https://www.thecocktaildb.com/api/json/v1/1/search.php?i=${id}`;
    
       const urlInfo = isSearchIngredient ? ingredientUrlInfo : drinkNameUrlInfo
@@ -58,7 +60,7 @@ const DrinkList = ({ingredientName, isSearchIngredient}) => {
           <>
           <div>
             <Sticky top={100}>
-              <h2 id='baseIngredients'>{id}</h2>
+              <h2 id='baseIngredients'>{id}{ingredientName}</h2>
             </Sticky>
           </div>
 
@@ -107,7 +109,7 @@ const DrinkList = ({ingredientName, isSearchIngredient}) => {
           </div>
           </>
             :
-          <p> loading .. </p>
+          <p> loading .. ingredient doesnt match! </p>
             );
     
 }
