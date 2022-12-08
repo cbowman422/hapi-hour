@@ -16,7 +16,7 @@ const RandomDrink = () => {
           setRandomDrink(json)
         })
         .catch(console.error) 
-      });
+      }, []);
 
 function refreshPage(){
       setTimeout(function() {

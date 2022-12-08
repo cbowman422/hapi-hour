@@ -2,6 +2,7 @@ import React from 'react'
 import {useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { useParams } from 'react-router-dom'
+import "./css/DrinkList.css"
 
 
 const DrinkList = (props) => {
@@ -24,21 +25,23 @@ const DrinkList = (props) => {
   return ( drinkList ?
 
     <div>
-      <h1 className='ingredientHeader'>Choose Your Cocktail</h1>
-      {drinkList.drinks.map((drinkListMap,drinkListIdx) => {
-        return (
-
-          <Link to={`/drinks-details/${drinkListMap.idDrink}`} key={drinkListIdx} className='componentCSS'>
-    
-            <div>        
-              <img width={150} src={drinkListMap.strDrinkThumb}></img>
-            </div>
-            <div className="cardTitle">
-              {drinkListMap.strDrink}
-            </div>
-          </Link>
-               )
-          })} 
+      <h2 className='ingredientSection'>
+        <a href={`/search`}><i className="backLink"></i>Ingredients</a>
+      </h2>
+      <section className='drinkList'>
+        {drinkList.drinks.map((drinkListMap,drinkListIdx) => {
+          return (
+            <Link to={`/drinks-details/${drinkListMap.idDrink}`} key={drinkListIdx} className='componentCSS'>
+              <div>        
+                <img width={150} src={drinkListMap.strDrinkThumb}></img>
+              </div>
+              <div className="cardTitle">
+                {drinkListMap.strDrink}
+              </div>
+            </Link>
+                 )
+            })}
+      </section> 
     </div>
       :
     <p> loading .. </p>
