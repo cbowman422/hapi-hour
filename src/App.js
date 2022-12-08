@@ -1,6 +1,6 @@
 import React from 'react';
 import DrinkDetails from './components/DrinkDetails';
-import Search from './components/Search';
+import IngredientOneList from './components/IngredientOneList';
 import { Route, Routes } from 'react-router-dom'
 import './App.css';
 import { useState, useEffect } from 'react';
@@ -69,8 +69,8 @@ return ( spiritList ?
     <main className="container">
       <div>
         <Routes>
-          <Route path='/' element={<Search spirit={spiritList} visitProp={false}/>} />
-          <Route path='/search/' element={<Search spirit={spiritList} visitProp={true}/>} />
+          <Route path='/' element={<IngredientOneList spirit={spiritList} visitProp={false}/>} />
+          <Route path='/search/' element={<IngredientOneList spirit={spiritList} visitProp={true}/>} />
           <Route path='/drinks/:id' element={ <DrinkList />} />
           <Route path='/drinks-details/' element={ <DrinkDetails drinkName={searchBarItem} isSearch={isSearch} /> } />
           <Route path='/drinks-details/:id' element={ <DrinkDetails /> } />

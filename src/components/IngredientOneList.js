@@ -1,14 +1,14 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import Sticky from 'react-stickynode';
-import "./css/Search.css"
+import "./css/IngredientOneList.css"
 
 
-const Search = (props) => {
+const IngredientOneList = (props) => {
 
       function scrollToList(){
             window.scrollTo({
-                  top: 900,
+                  top: 940,
                   behavior:"smooth"
             })
       }
@@ -28,8 +28,8 @@ const Search = (props) => {
       function Ingredients(){
             return (
                   <>
-                  <div className='baseIngredientContainer'>
-                        <Sticky>
+                  <div className=''>
+                        <Sticky top={100}>
                               <h2 id='baseIngredients'>Base Ingredient</h2>
                         </Sticky>
                   </div>
@@ -37,11 +37,11 @@ const Search = (props) => {
                         {props.spirit.map((search,searchIdx) => {
                               return (
                                     <Link to={`/drinks/${search.strIngredient1}`} key={searchIdx} className='ingredientCard'>
-                                          <div>
-                                                <img width={150} src={`https://www.thecocktaildb.com/images/ingredients/${search.strIngredient1}.png`} ></img>
-                                          </div>
                                           <div className='ingredientName'>
                                                 <h4>{search.strIngredient1}</h4>
+                                          </div>
+                                          <div>
+                                                <img width={150} src={`https://www.thecocktaildb.com/images/ingredients/${search.strIngredient1}.png`} ></img>
                                           </div>
                                     </Link>
                               )
@@ -62,7 +62,7 @@ const Search = (props) => {
             </>
       )
 }
-export default Search
+export default IngredientOneList
 
 
 
