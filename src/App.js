@@ -57,7 +57,7 @@ return ( spiritList ?
         <div className='pageTitle'>
           <a href="/search">The Rabbit Hole</a>
         </div>
-        <input type="text" id="myInput" value={searchBarItem} onChange={handleItemChange} />
+        <input type="text" id="myInput" value={searchBarItem} onChange={handleItemChange} placeholder='Search by name'/>
              
              <Link to={'/drinks-details/'}> 
               <button onClick={nameClick}> 
@@ -69,8 +69,8 @@ return ( spiritList ?
     <main className="container">
       <div>
         <Routes>
-          <Route path='/' element={<Search spirit={spiritList}/>} />
-          <Route path='/search/' element={<Search spirit={spiritList}/>} />
+          <Route path='/' element={<Search spirit={spiritList} visitProp={false}/>} />
+          <Route path='/search/' element={<Search spirit={spiritList} visitProp={true}/>} />
           <Route path='/drinks/:id' element={ <DrinkList />} />
           <Route path='/drinks-details/' element={ <DrinkDetails drinkName={searchBarItem} isSearch={isSearch} /> } />
           <Route path='/drinks-details/:id' element={ <DrinkDetails /> } />
