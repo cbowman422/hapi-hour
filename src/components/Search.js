@@ -8,7 +8,7 @@ const Search = (props) => {
 
       function scrollToList(){
             window.scrollTo({
-                  top: 940,
+                  top: 900,
                   behavior:"smooth"
             })
       }
@@ -28,8 +28,8 @@ const Search = (props) => {
       function Ingredients(){
             return (
                   <>
-                  <div className=''>
-                        <Sticky top={100}>
+                  <div className='baseIngredientContainer'>
+                        <Sticky>
                               <h2 id='baseIngredients'>Base Ingredient</h2>
                         </Sticky>
                   </div>

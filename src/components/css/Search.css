@@ -1,20 +1,22 @@
 /* Nav Ingredients CSS */
-#baseIngredientDrinks {
+.baseIngredientContainer h2{
     display: flex;
     justify-content: center;
-    /* background-color: #2f2626; */
     color: #c5aa6a;
     font-size: 36px;
-    margin: -5px 0 0 0;
-    height: 50px;
+    margin: 0;
     width: 100%;
-    bottom: 0;
+    top: 0;
     position: absolute;
-    /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
+    z-index: 2;
+  }
+  .baseIngredientContainer{
+    z-index: 2;
   }
   .ingredientsContainer{
     display: flex;
     padding-top: 60px;
+    padding: 60px 10px 0 10px;
     width: 100%;
     min-width: 800px;
     flex-wrap: wrap;

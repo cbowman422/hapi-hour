@@ -25,11 +25,9 @@ const DrinkList = (props) => {
 
   return ( drinkList ?
     <>
-    <div>
-      <Sticky top={100}>
-        <h2 id='baseIngredientDrinks'>{id}</h2>
+      <Sticky>
+        <h2 className='baseIngredientDrinks'>{id}</h2>
       </Sticky>
-    </div>
     <div className='ingredientSection'>
       <h2 className='backBox'>
         <a href={`/search`}><i className="backLink"></i>Change Base Ingredient</a>
