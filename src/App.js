@@ -25,7 +25,7 @@ function App() {
 
       setTimeout(function() {
         setIsSearch(current => !current)
-         }, 5);
+         }, 1);
 
     } else {
 
@@ -43,7 +43,6 @@ function App() {
     .then((response) => response.json())
     .then((json) => {
       setSpiritList(json.drinks)
-     
     })
     .catch(console.error) 
   }, []);
@@ -57,7 +56,7 @@ return ( spiritList ?
             <a href="/search/">COCKTAILS</a>
             <input type="text" id="myInput" value={searchBarItem} onChange={handleItemChange} /> 
              
-             <Link to={'/name-search/'}> 
+             <Link to={'/drinks-details/'}> 
               <button onClick={nameClick}> 
                by name
               </button>
@@ -74,7 +73,7 @@ return ( spiritList ?
           <Route path='/' element={<Search spirit={spiritList}/>} />
           <Route path='/search/' element={<Search spirit={spiritList}/>} />
           <Route path='/drinks/:id' element={ <DrinkList />} />
-          <Route path='/name-search/' element={ <DrinkDetails drinkName={searchBarItem} isSearch={isSearch} /> } />
+          <Route path='/drinks-details/' element={ <DrinkDetails drinkName={searchBarItem} isSearch={isSearch} /> } />
           <Route path='/drinks-details/:id' element={ <DrinkDetails /> } />
           <Route path="*" element={<NotFound />} />
         </Routes>

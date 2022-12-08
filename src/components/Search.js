@@ -11,7 +11,7 @@ const Search = (props) => {
 return (
       <section className="ingredientContainer">
       <div className='homeContainer'>
-      <img src='https://imgur.com/jFROHy1.jpg'/>
+      <img height={500} src='https://imgur.com/jFROHy1.jpg'/>
       <h1>WELCOME</h1>
         </div>
 

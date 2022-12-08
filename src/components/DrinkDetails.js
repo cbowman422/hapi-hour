@@ -24,16 +24,15 @@ const DrinkDetails = ({drinkName, isSearch}) => {
           setDrinkDetail(json)
       })
       .catch(console.error)
-  }, );
+  },[isSearch] );
   
- 
 
   return ( drinkDetail ?
 
-
-        <div className="details-container">
+     
+            <div className="details-container">
             {drinkDetail.drinks.map((detailsMap,idx) => {
-            return ( 
+            return (
           <div key={idx}>
             <a href={`/drinks/${detailsMap.strIngredient1}`} className="backLink">Back to {detailsMap.strIngredient1}</a>
             <h3 className='drinkTitle'>{detailsMap.strDrink}</h3>
@@ -70,6 +69,8 @@ const DrinkDetails = ({drinkName, isSearch}) => {
           })} 
 
         </div> 
+
+
         :
         <p> loading ..  </p>
     );
