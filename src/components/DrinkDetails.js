@@ -4,28 +4,33 @@ import { useParams } from 'react-router';
 import "./css/DrinkDetails.css"
 
 
-const DrinkDetails = () => {
+const DrinkDetails = ({drinkName, isSearch}) => {
 
-  let { idd } = useParams();
+  let { id } = useParams();
   
-
   const [drinkDetail, setDrinkDetail] = useState(null)
+  const ingredientUrl = `lookup.php?i=${id}`
+  const drinkNameUrl = `search.php?s=${drinkName}`
+
+  const baseUrl = 'https://www.thecocktaildb.com/api/json/v1/1/'
+  const specUrl = isSearch ? drinkNameUrl : ingredientUrl
+
+  const url = baseUrl + specUrl;
 
   useEffect(() => {
-      const url = `https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${idd}`;
       fetch(url)
       .then((res) => res.json())
       .then((json) => {
           setDrinkDetail(json)
       })
       .catch(console.error)
-  }, []);
+  }, [isSearch] );
   
 
-
   return ( drinkDetail ?
-        <>
 
+     
+            <>
             {drinkDetail.drinks.map((detailsMap,idx) => {
             return (
               <>
@@ -68,8 +73,10 @@ const DrinkDetails = () => {
           })} 
 
         </> 
+
+
         :
-        <p> loading .. </p>
+        <p> loading ..  </p>
     );
 }
 export default DrinkDetails
