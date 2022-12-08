@@ -14,8 +14,7 @@ const DrinkDetails = ({drinkName, isSearch}) => {
   const baseUrl = 'https://www.thecocktaildb.com/api/json/v1/1/'
   const specUrl = isSearch ? drinkNameUrl : ingredientUrl
 
-  const url = baseUrl + specUrl
-  // const url = `https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${id}`;
+  const url = baseUrl + specUrl;
 
   useEffect(() => {
       fetch(url)
@@ -24,7 +23,7 @@ const DrinkDetails = ({drinkName, isSearch}) => {
           setDrinkDetail(json)
       })
       .catch(console.error)
-  },[isSearch] );
+  }, [isSearch] );
   
 
   return ( drinkDetail ?
