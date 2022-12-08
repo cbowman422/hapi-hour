@@ -1,52 +1,60 @@
 /* Nav Ingredients CSS */
-#baseIngredients {
+#baseIngredientDrinks {
     display: flex;
     justify-content: center;
-    background-color: #2f2626;
+    /* background-color: #2f2626; */
     color: #c5aa6a;
-    font-size: 48px;
+    font-size: 36px;
     margin: -5px 0 0 0;
-    height: 60px;
+    height: 50px;
     width: 100%;
     bottom: 0;
     position: absolute;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
   }
   .ingredientsContainer{
+    display: flex;
     padding-top: 60px;
+    width: 100%;
+    min-width: 800px;
+    flex-wrap: wrap;
+    align-content: space-around;
   }
   .ingredientCard{
     display: inline-block;
-    background: url("https://imgur.com/6cxhOZB.jpg");
-    background-size: 200px 300px;
-    background-position: left 260px;
+    /* flex-flow: column;
+    justify-content: center; */
+
     min-height: 150px;
     min-width: 170px;
     border-radius: 10px;
+    overflow: hidden;
     width: 170px;
     margin: 10px;
-    padding-top: 90px;
-    padding: 10px;
+    /* padding-top: 90px;
+    padding: 10px; */
     text-decoration: none;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
   }
   .ingredientCard img{
+    background: url("https://imgur.com/QKJ0bZt.jpg");
+    background-size: 150px 170px;
     padding: 10px;
-    margin-top: ;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 150px;
   }
-  .ingredientName{
-    color: whitesmoke;
+  .ingredientName h4{
+    background-color: #404040;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    color: #c5aa6a;
     font-weight: bold;
     padding: 5px;
-    height: 50px;
+    height: 40px;
     font-size: 16px;
     text-align: center;
     margin: 0;
-  }
-  .ingredientName h4{
-    margin-top: 5px;
   }

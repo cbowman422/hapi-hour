@@ -1,12 +1,30 @@
-.ingredientSection{
+#baseIngredients {
+  display: flex;
+  justify-content: center;
+  background-color: #2f2626;
+  color: #c5aa6a;
+  font-size: 36px;
+  margin: -5px 0 0 0;
+  height: 60px;
+  width: 100%;
+  bottom: 0;
+  position: absolute;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.backBox{
     margin-left: 10px;
 }
-.ingredientSection a{
+.backBox a{
+    margin-top: 12px;
     color: #c5aa6a;
     text-decoration: none;
 }
-.ingredientSection i{
+.backBox i{
     margin-right: 10px;
+}
+.ingredientSection {
+  margin-top: 80px;
 }
 /* .drinkList{
     background-color: #404040;
@@ -34,10 +52,12 @@
     width: 150px;
   }
   .cardTitle {
+    display: flex;
+    justify-content: center;
+    align-content: center;
     color: #c5aa6a;
     font-weight: bold;
     padding: 5px;
     height: 50px;
     font-size: 16px;
-    text-align: left;
   }

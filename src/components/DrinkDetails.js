@@ -21,7 +21,7 @@ const DrinkDetails = ({drinkName, isSearch}) => {
       fetch(url)
       .then((res) => res.json())
       .then((json) => {
-          setDrinkDetail(json)
+          setDrinkDetail(json.drinks)
       })
       .catch(console.error)
   }, [isSearch] );
@@ -31,7 +31,7 @@ const DrinkDetails = ({drinkName, isSearch}) => {
 
      
             <>
-            {drinkDetail.drinks.map((detailsMap,idx) => {
+            {drinkDetail.map((detailsMap,idx) => {
             return (
               <>
               <h2 className='detailsBack'>
@@ -73,8 +73,6 @@ const DrinkDetails = ({drinkName, isSearch}) => {
           })} 
 
         </> 
-
-
         :
         <p> loading ..  </p>
     );

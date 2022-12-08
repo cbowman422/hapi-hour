@@ -55,22 +55,22 @@ return ( spiritList ?
           <RandomDrink />
         </div>
         <div className='pageTitle'>
-          <a href="/search">The Rabbit Hole</a>
+          <a href="/search">H-API-HOUR</a>
         </div>
-        <input type="text" id="myInput" value={searchBarItem} onChange={handleItemChange} />
-             
-             <Link to={'/drinks-details/'}> 
-              <button onClick={nameClick}> 
-               by name
-              </button>
-             </Link>
-
+        <div className='searchBar'>
+          <input type="text" id="myInput" value={searchBarItem} onChange={handleItemChange} />
+          <Link to={'/drinks-details/'}> 
+            <button onClick={nameClick}> 
+              by name
+            </button>
+          </Link>
+        </div>
     </header>
     <main className="container">
       <div>
         <Routes>
-          <Route path='/' element={<Search spirit={spiritList}/>} />
-          <Route path='/search/' element={<Search spirit={spiritList}/>} />
+          <Route path='/' element={<Search spirit={spiritList} visitProp={false}/>} />
+          <Route path='/search/' element={<Search spirit={spiritList} visitProp={true}/>} />
           <Route path='/drinks/:id' element={ <DrinkList />} />
           <Route path='/drinks-details/' element={ <DrinkDetails drinkName={searchBarItem} isSearch={isSearch} /> } />
           <Route path='/drinks-details/:id' element={ <DrinkDetails /> } />

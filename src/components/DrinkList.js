@@ -3,6 +3,7 @@ import {useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { useParams } from 'react-router-dom'
 import "./css/DrinkList.css"
+import Sticky from 'react-stickynode';
 
 
 const DrinkList = (props) => {
@@ -23,10 +24,15 @@ const DrinkList = (props) => {
 
 
   return ( drinkList ?
-
+    <>
     <div>
-      <h2 className='ingredientSection'>
-        <a href={`/search`}><i className="backLink"></i>Ingredients</a>
+      <Sticky top={100}>
+        <h2 id='baseIngredientDrinks'>{id}</h2>
+      </Sticky>
+    </div>
+    <div className='ingredientSection'>
+      <h2 className='backBox'>
+        <a href={`/search`}><i className="backLink"></i>Change Base Ingredient</a>
       </h2>
       <section className='drinkList'>
         {drinkList.drinks.map((drinkListMap,drinkListIdx) => {
@@ -43,6 +49,7 @@ const DrinkList = (props) => {
             })}
       </section> 
     </div>
+    </>
       :
     <p> loading .. </p>
       );
