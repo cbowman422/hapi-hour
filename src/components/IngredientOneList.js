@@ -1,10 +1,10 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import Sticky from 'react-stickynode';
-import "./css/Search.css"
+import "./css/IngredientOneList.css"
 
 
-const Search = (props) => {
+const IngredientOneList = (props) => {
 
       function scrollToList(){
             window.scrollTo({
@@ -19,7 +19,7 @@ const Search = (props) => {
                 <img src='https://imgur.com/jFROHy1.jpg'/>
                 <div className='homeText'>
                   <h1>WELCOME</h1>
-                  <a onClick={scrollToList}><h2>SEE INGREDIENTS</h2></a>
+                  <a onClick={scrollToList}><h2>MENU</h2></a>
                 </div>
               </div>
             )
@@ -30,7 +30,7 @@ const Search = (props) => {
                   <>
                   <div className=''>
                         <Sticky top={100}>
-                              <h2 id='baseIngredients'>Base Ingredients</h2>
+                              <h2 id='baseIngredients'>Base Ingredient</h2>
                         </Sticky>
                   </div>
                   <section className="ingredientsContainer">
@@ -62,7 +62,7 @@ const Search = (props) => {
             </>
       )
 }
-export default Search
+export default IngredientOneList
 
 
 
