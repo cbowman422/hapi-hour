@@ -5,9 +5,16 @@ import { Link } from 'react-router-dom'
 
 const Search = (props) => {
   
+   
+
 
 return (
       <section className="ingredientContainer">
+      <div className='homeContainer'>
+      <img height={500} src='https://imgur.com/jFROHy1.jpg'/>
+      <h1>WELCOME</h1>
+        </div>
+
             <h1 className='ingredientHeader'>Choose Your Ingredient</h1>
             {props.spirit.map((search,searchIdx) => {
                   return (
