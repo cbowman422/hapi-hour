@@ -55,11 +55,11 @@ return ( spiritList ?
           <RandomDrink />
         </div>
         <div className='pageTitle'>
-          <a href="/search">The Rabbit Hole</a>
+          <a href="/search">h-API-Hour</a>
         </div>
 
         <div className="searchBar">
-              <input type="text" id="myInput" value={searchBarItem} onChange={handleItemChange} placeholder='Search by name'/>
+              <input type="text" id="myInput" value={searchBarItem} onChange={handleItemChange} placeholder='Cocktail name'/>
              
              <Link to={'/drinks-details/'}> 
               <button onClick={nameClick}> 

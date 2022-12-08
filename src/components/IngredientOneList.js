@@ -19,7 +19,7 @@ const IngredientOneList = (props) => {
                 <img src='https://imgur.com/jFROHy1.jpg'/>
                 <div className='homeText'>
                   <h1>WELCOME</h1>
-                  <a onClick={scrollToList}><h2>SEE INGREDIENTS</h2></a>
+                  <a onClick={scrollToList}><h2>MENU</h2></a>
                 </div>
               </div>
             )
@@ -30,7 +30,7 @@ const IngredientOneList = (props) => {
                   <>
                   <div className=''>
                         <Sticky top={100}>
-                              <h2 id='baseIngredients'>Base Ingredients</h2>
+                              <h2 id='baseIngredients'>Base Ingredient</h2>
                         </Sticky>
                   </div>
                   <section className="ingredientsContainer">
