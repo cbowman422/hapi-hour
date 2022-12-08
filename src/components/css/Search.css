@@ -1,0 +1,52 @@
+/* Nav Ingredients CSS */
+#baseIngredients {
+    display: flex;
+    justify-content: center;
+    background-color: #2f2626;
+    color: #c5aa6a;
+    font-size: 48px;
+    margin: -5px 0 0 0;
+    height: 60px;
+    width: 100%;
+    bottom: 0;
+    position: absolute;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  }
+  .ingredientsContainer{
+    padding-top: 60px;
+  }
+  .ingredientCard{
+    display: inline-block;
+    background: url("https://imgur.com/6cxhOZB.jpg");
+    background-size: 200px 300px;
+    background-position: left 260px;
+    min-height: 150px;
+    min-width: 170px;
+    border-radius: 10px;
+    width: 170px;
+    margin: 10px;
+    padding-top: 90px;
+    padding: 10px;
+    text-decoration: none;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+  }
+  .ingredientCard img{
+    padding: 10px;
+    margin-top: ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+  }
+  .ingredientName{
+    color: whitesmoke;
+    font-weight: bold;
+    padding: 5px;
+    height: 50px;
+    font-size: 16px;
+    text-align: center;
+    margin: 0;
+  }
+  .ingredientName h4{
+    margin-top: 5px;
+  }

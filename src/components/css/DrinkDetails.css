@@ -1,0 +1,69 @@
+/* Details Page CSS */
+.details-container {
+    display: flex;
+    background-color: #404040;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    width: 95%;
+    height: 550px;
+    margin-top: 50px;
+    margin-left: 50px;
+  }
+  .backLink {
+    margin-left: 50px;
+    margin-top: 20px;
+    text-decoration: none;
+    color: #c5aa6a;
+    height: 5px;
+    width: 5px;
+
+    border: solid #c5aa6a;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+  }
+  .details-container img {
+    height: 550px;
+    width: 550px;
+  }
+  .detailList{
+    list-style-type: none;
+  }
+  .detailItems{
+    margin: 35px 0 0 10px;
+    padding: 5px;
+  }
+  .mixingInstructions {
+    /* background-color: #5f4c4c; */
+    margin-left: 20px;
+    padding: 5px;
+  }
+  .drinkTitle{
+    /* background-color: #5f4c4c; */
+    padding: 5px;
+  }
+  .drinkGlass {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 170px;
+    margin-left: 20px;
+    padding: 5px;
+  }
+  .drinkGlass h4{
+    margin-top: 300px;
+  }
+  .ingredientList{
+    /* background-color: #5f4c4c; */
+    margin-left: 20px;
+  }
+
+  .detailsBack i{
+    margin-right: 10px;
+  }
+  .detailsBack a{
+    color: #c5aa6a;
+    text-decoration: none;
+}

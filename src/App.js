@@ -7,19 +7,17 @@ import { useState, useEffect } from 'react';
 import DrinkList from './components/DrinkList';
 import NotFound from './components/NotFound';
 import RandomDrink from './components/RandomDrink';
+import { Link } from 'react-router-dom'
 
 function App() {
 
-  const [searchBarItem, setSearchBarItem] = useState('')
-
-
+  // const [searchBarItem, setSearchBarItem] = useState('')
   // const handleItemChange = (e) => {
   //   const newSearchItem = e.target.value
   //   setTodoItem(newSearchItem)
     
   //   console.log(e)
   // }
-
   const [spiritList, setSpiritList] = useState([])
 
   useEffect(() => {
@@ -28,29 +26,26 @@ function App() {
     .then((response) => response.json())
     .then((json) => {
       setSpiritList(json.drinks)
-     
     })
     .catch(console.error) 
   }, []);
 
-
 return ( spiritList ?
   <div>
     <header className="header" id="sticky">
-        <div>
+        <div className='randomDrinkBtn'>
           <RandomDrink />
         </div>
-        <div>
-          <a href="/">COCKTAILS</a>
+        <div className='pageTitle'>
+          <a href="/search">The Rabbit Hole</a>
         </div>
-        <div>
-          <input type="text" id="myInput"/>
-        </div>
+        <input type="text" id="myInput"/>
     </header>
     <main className="container">
       <div>
         <Routes>
-          <Route path='/' element={<Search spirit={spiritList}/>} />
+          <Route path='/' element={<Search spirit={spiritList} visitProp={false}/>} />
+          <Route path='/search' element={<Search spirit={spiritList} visitProp={true}/>} />
           <Route path='/drinks/:id' element={<DrinkList />} />
           <Route path='/drinks-details/:idd' element={ <DrinkDetails /> } />
           <Route path="*" element={<NotFound />} />
