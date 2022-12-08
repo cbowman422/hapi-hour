@@ -47,9 +47,13 @@ return ( spiritList ?
           <h1>
             <a href="/search/">COCKTAILS</a>
             <input type="text" id="myInput" value={searchBarItem} onChange={handleItemChange} /> 
+             
+             <Link to={'/name-details/'}> 
               <button onClick={nameClick}> 
                by name
               </button>
+             </Link>
+
             <RandomDrink />
         </h1>
     </header>
@@ -61,7 +65,8 @@ return ( spiritList ?
           <Route path='/' element={<Search spirit={spiritList}/>} />
           <Route path='/search/' element={<Search spirit={spiritList}/>} />
           <Route path='/drinks/:id' element={ <DrinkList />} />
-          <Route path='/drinks-details/:id' element={ <DrinkDetails drinkName={searchBarItem} isSearch={isSearch} /> } />
+          <Route path='/name-details/' element={ <DrinkDetails drinkName={searchBarItem} isSearch={isSearch} /> } />
+          <Route path='/drinks-details/:id' element={ <DrinkDetails /> } />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </div>
