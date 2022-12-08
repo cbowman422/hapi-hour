@@ -18,7 +18,10 @@ function App() {
 
   const [isSearch, setIsSearch] = useState(false)
 
+  const [isSearchIngredient, setIsSearchIngredient] = useState(false)
 
+
+  
   const nameClick = () => {
     setIsSearch(current => !current)
     if (setIsSearch) {
@@ -32,9 +35,24 @@ function App() {
     }
   }
 
+
+  const ingredientClick = () => {
+    setIsSearchIngredient(current => !current)
+    if (setIsSearchIngredient) {
+
+      setTimeout(function() {
+        setIsSearchIngredient(current => !current)
+         }, 1);
+
+    } else {
+
+    }
+  }
+
   const handleItemChange = (e) => {
     const newSearchItem = e.target.value
     setSearchBarItem(newSearchItem)
+    
   }
 
   useEffect(() => {
@@ -63,7 +81,13 @@ return ( spiritList ?
              
              <Link to={'/drinks-details/'}> 
               <button onClick={nameClick}> 
-               search
+               search name
+              </button>
+             </Link>
+             
+             <Link to={'/drinks/'}> 
+              <button onClick={ingredientClick}> 
+               search ing
               </button>
              </Link>
         </div>
@@ -74,6 +98,7 @@ return ( spiritList ?
         <Routes>
           <Route path='/' element={<IngredientOneList spirit={spiritList} visitProp={false}/>} />
           <Route path='/search/' element={<IngredientOneList spirit={spiritList} visitProp={true}/>} />
+          <Route path='/drinks/' element={ <DrinkList ingredientName={searchBarItem}/>} isSearchIngredient={isSearchIngredient} />
           <Route path='/drinks/:id' element={ <DrinkList />} />
           <Route path='/drinks-details/' element={ <DrinkDetails drinkName={searchBarItem} isSearch={isSearch} /> } />
           <Route path='/drinks-details/:id' element={ <DrinkDetails /> } />
