@@ -7,21 +7,26 @@ import { useState, useEffect } from 'react';
 import DrinkList from './components/DrinkList';
 import NotFound from './components/NotFound';
 import RandomDrink from './components/RandomDrink';
-import Home from './components/Home';
+import { Link } from 'react-router-dom';
 
 function App() {
 
+
   const [searchBarItem, setSearchBarItem] = useState('')
 
-
-  // const handleItemChange = (e) => {
-  //   const newSearchItem = e.target.value
-  //   setTodoItem(newSearchItem)
-    
-  //   console.log(e)
-  // }
-
   const [spiritList, setSpiritList] = useState([])
+
+  const [isSearch, setIsSearch] = useState(false)
+
+
+  const nameClick = () => {
+    setIsSearch(current => !current)
+  }
+
+  const handleItemChange = (e) => {
+    const newSearchItem = e.target.value
+    setSearchBarItem(newSearchItem)
+  }
 
   useEffect(() => {
     const url = "https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list";
@@ -33,6 +38,7 @@ function App() {
     })
     .catch(console.error) 
   }, []);
+ 
 
 
 return ( spiritList ?
@@ -40,7 +46,10 @@ return ( spiritList ?
     <header className="header" id="sticky">
           <h1>
             <a href="/search/">COCKTAILS</a>
-            <input type="text" id="myInput"/> 
+            <input type="text" id="myInput" value={searchBarItem} onChange={handleItemChange} /> 
+              <button onClick={nameClick}> 
+               by name
+              </button>
             <RandomDrink />
         </h1>
     </header>
@@ -49,10 +58,10 @@ return ( spiritList ?
     <main className="container">
       <div>
         <Routes>
-          <Route path='/' element={<Home spirit={spiritList}/>} />
+          <Route path='/' element={<Search spirit={spiritList}/>} />
           <Route path='/search/' element={<Search spirit={spiritList}/>} />
-          <Route path='/drinks/:id' element={<DrinkList />} />
-          <Route path='/drinks-details/:idd' element={ <DrinkDetails /> } />
+          <Route path='/drinks/:id' element={ <DrinkList />} />
+          <Route path='/drinks-details/:id' element={ <DrinkDetails drinkName={searchBarItem} isSearch={isSearch} /> } />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </div>
