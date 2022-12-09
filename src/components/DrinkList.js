@@ -6,34 +6,56 @@ import "./css/DrinkList.css"
 import Sticky from 'react-stickynode';
 
 
-const DrinkList = (props) => {
+const DrinkList = ({ingredientName, isSearchIngredient}) => {
 
-    let { id } = useParams();
 
-    const [drinkList , setDrinkList] = useState(null)
-    
-    useEffect(() => {
-        const url = `https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${id}`;
-        fetch(url)
-        .then((response) => response.json())
-        .then((json) => {
-          setDrinkList(json)
-        })
-        .catch(console.error) 
-      }, []);
- 
+  let { id } = useParams();
+
+  // Defining state of drink list & conditional statement for search by ingredients vs search by clicking link in
+  const [drinkList , setDrinkList] = useState(null)
+  const ingredientUrlDrinkList = `https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${ingredientName}`
+  const drinkNameUrlDrinkList = `https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${id}`
+  const url = isSearchIngredient ? ingredientUrlDrinkList : drinkNameUrlDrinkList
+
+  useEffect(() => {
+      
+      fetch(url)
+      .then((response) => response.json())
+      .then((json) => {
+        setDrinkList(json)
+        console.log(url)
+      })
+      .catch(console.error) 
+    }, [isSearchIngredient]);
+
+
+
+
+
+
+
+
+      // this is for the description of tha alchohol type and ABV in drinks list page
       const [drinkListInfo , setDrinkListInfo] = useState(null)
-    
+      // const ingredientUrlInfo = `https://www.thecocktaildb.com/api/json/v1/1/search.php?i=${ingredientName}`
+      const drinkNameUrlInfo = `https://www.thecocktaildb.com/api/json/v1/1/search.php?i=${id}`;
+      //const urlInfo = isSearchIngredient ? ingredientUrlInfo : drinkNameUrlInfo
+     
       useEffect(() => {
-          const url = `https://www.thecocktaildb.com/api/json/v1/1/search.php?i=${id}`;
-          fetch(url)
+          fetch(drinkNameUrlInfo)
           .then((response) => response.json())
           .then((json) => {
-            setDrinkListInfo(json)
+            setDrinkListInfo(json.ingredients)
           })
           .catch(console.error) 
-        }, []);
+        }, [isSearchIngredient]);
    
+
+
+
+
+
+
 
         return ( drinkList && drinkListInfo ?
           <>
@@ -45,7 +67,8 @@ const DrinkList = (props) => {
 
 
         <div className='drinkInfo'>
-        {drinkListInfo.ingredients.map((drinkListInfoMap,drinkListInfoIdx) => {
+
+        {drinkListInfo.map((drinkListInfoMap,drinkListInfoIdx) => {
                             return (
                           <div key={drinkListInfoIdx}> 
                           <h2>
@@ -87,7 +110,7 @@ const DrinkList = (props) => {
           </div>
           </>
             :
-          <p> loading .. </p>
+          <p> loading .. ingredient doesnt match! </p>
             );
     
 }
