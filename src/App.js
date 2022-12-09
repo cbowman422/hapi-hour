@@ -81,7 +81,7 @@ return ( spiritList ?
         <div className="searchBar">
               <input type="text" id="myInput" value={searchBarItem} onChange={handleItemChange} placeholder='Cocktail name'/>
              
-             <Link to={'/drinks-details/'}> 
+             <Link to={`/drinks-details/${searchBarItem}`}> 
               <button onClick={nameClick}> 
                search name
               </button>
@@ -101,8 +101,11 @@ return ( spiritList ?
           <Route path='/' element={<IngredientOneList spirit={spiritList} visitProp={false}/>} />
           <Route path='/search/' element={<IngredientOneList spirit={spiritList} visitProp={true}/>} />
           <Route path='/drinks/:id' element={ <DrinkList ingredientName={searchBarItem} isSearchIngredient={isSearchIngredient} />} />
-          <Route path='/drinks-details/' element={ <DrinkDetails drinkName={searchBarItem} isSearch={isSearch}/>} />
-          <Route path='/drinks-details/:id' element={ <DrinkDetails /> } />
+
+          {/* <Route path='/drinks-details/' element={ <DrinkDetails drinkName={searchBarItem} isSearch={isSearch}/>} /> */}
+
+          <Route path='/drinks-details/:id' element={ <DrinkDetails drinkName={searchBarItem} isSearch={isSearch} /> } />
+
           <Route path="*" element={<NotFound />} />
         </Routes>
       </div>

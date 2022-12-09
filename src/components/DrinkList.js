@@ -16,7 +16,7 @@ const DrinkList = ({ingredientName, isSearchIngredient}) => {
 
 
 
-    //
+    // Defining state of drink list & conditional statement for search by ingredients vs search by clicking link in
     const [drinkList , setDrinkList] = useState(null)
     const ingredientUrlDrinkList = `https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${ingredientName}`
     const drinkNameUrlDrinkList = `https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${id}`
@@ -44,7 +44,7 @@ const DrinkList = ({ingredientName, isSearchIngredient}) => {
       const [drinkListInfo , setDrinkListInfo] = useState(null)
       // const ingredientUrlInfo = `https://www.thecocktaildb.com/api/json/v1/1/search.php?i=${ingredientName}`
       const drinkNameUrlInfo = `https://www.thecocktaildb.com/api/json/v1/1/search.php?i=${id}`;
-     //const urlInfo = isSearchIngredient ? ingredientUrlInfo : drinkNameUrlInfo
+      //const urlInfo = isSearchIngredient ? ingredientUrlInfo : drinkNameUrlInfo
      
       useEffect(() => {
           fetch(drinkNameUrlInfo)
