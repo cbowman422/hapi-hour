@@ -58,7 +58,6 @@ function App()
     setSearchBarItem(newSearchItem)
   }
 
-
 // Grabs the list of ingredients 1 from API for display on home/ search page.
   useEffect(() => 
   {
@@ -83,12 +82,12 @@ function App()
           <a href="/search">h-API-Hour</a>
         </div>
         <div className="searchBar">
-          <input type="text" id="myInput" value={searchBarItem} onChange={handleItemChange} placeholder='Cocktail name'/>
+          <input type="text" id="myInput" value={searchBarItem} onChange={handleItemChange} placeholder='Search..'/>
             <Link to={`/drinks-details/${searchBarItem}`}> 
-              <button onClick={nameClick}> search name </button>
+              <button onClick={nameClick} className='searchName' > by name </button>
             </Link>
             <Link to={`/drinks/${searchBarItem}`}> 
-              <button onClick={ingredientClick}> search ing </button>
+              <button onClick={ingredientClick} className='searchBase' > by base </button>
             </Link>
         </div>
       </header>

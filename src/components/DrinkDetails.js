@@ -32,7 +32,7 @@ const DrinkDetails = ({drinkName, isSearch}) =>
       .catch(console.error)
   }, [isSearch] );
   
-// Conditional return
+// Conditional return.
   return ( drinkDetail ?   
     <>
       {drinkDetail.map((detailsMap,idx) => 
