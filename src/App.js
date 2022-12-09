@@ -17,7 +17,8 @@ function App() {
   const [isSearch, setIsSearch] = useState(false)
   const [isSearchIngredient, setIsSearchIngredient] = useState(false)
 
-  // Search By Name
+
+  // Search drink list by name cick function to reset state to false after click
   const nameClick = () => {
     setIsSearch(current => !current)
     if (setIsSearch) {
@@ -30,7 +31,9 @@ function App() {
 
     }
   }
-  // Search By Ingredient
+
+
+  // Search drink list by ingredient cick function to reset state to false after click
   const ingredientClick = () => {
     setIsSearchIngredient(current => !current)
     if (setIsSearchIngredient) {
@@ -44,13 +47,16 @@ function App() {
     }
   }
 
-  // Handles search bar
+
+
+  // Event handler for setting the search bar input to state
   const handleItemChange = (e) => {
-    const newSearchItem = e.target.value
+    const newSearchItem = e.target.value.toUpperCase()
     setSearchBarItem(newSearchItem)
   }
 
-  // Fetches Base Ingredients
+
+  // Grabs the list of ingredients 1 from API
   useEffect(() => {
     const url = "https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list";
     fetch(url)
@@ -90,8 +96,12 @@ return ( spiritList ?
         <Routes>
           <Route path='/' element={<IngredientOneList spirit={spiritList} visitProp={false}/>} />
           <Route path='/search/' element={<IngredientOneList spirit={spiritList} visitProp={true}/>} />
-          <Route path='/drinks/:id' element={ <DrinkList ingredientName={searchBarItem} isSearchIngredient={isSearchIngredient}/>} />
-          <Route path='/drinks-details/:id' element={ <DrinkDetails drinkName={searchBarItem} isSearch={isSearch}/> } />
+          <Route path='/drinks/:id' element={ <DrinkList ingredientName={searchBarItem} isSearchIngredient={isSearchIngredient} />} />
+
+          {/* <Route path='/drinks-details/' element={ <DrinkDetails drinkName={searchBarItem} isSearch={isSearch}/>} /> */}
+
+          <Route path='/drinks-details/:id' element={ <DrinkDetails drinkName={searchBarItem} isSearch={isSearch} /> } />
+
           <Route path="*" element={<NotFound />} />
         </Routes>
       </div>

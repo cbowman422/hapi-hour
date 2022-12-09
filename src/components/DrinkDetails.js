@@ -7,16 +7,16 @@ import "./css/DrinkDetails.css"
 const DrinkDetails = ({drinkName, isSearch}) => {
 
   let { id } = useParams();
-  
+
+  // Defining state and conditional for search by name vs click in by link from drinks list link
   const [drinkDetail, setDrinkDetail] = useState(null)
   const ingredientUrl = `lookup.php?i=${id}`
   const drinkNameUrl = `search.php?s=${drinkName}`
-
   const baseUrl = 'https://www.thecocktaildb.com/api/json/v1/1/'
   const specUrl = isSearch ? drinkNameUrl : ingredientUrl
-
   const url = baseUrl + specUrl;
 
+  
   useEffect(() => {
       fetch(url)
       .then((res) => res.json())
@@ -27,6 +27,7 @@ const DrinkDetails = ({drinkName, isSearch}) => {
       .catch(console.error)
   }, [isSearch] );
   
+
 
 
   return ( drinkDetail ?
