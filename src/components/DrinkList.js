@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom'
 import { useParams } from 'react-router-dom'
 import "./css/DrinkList.css"
 import Sticky from 'react-stickynode';
-import Sticky from 'react-stickynode';
 
 
 const DrinkList = (props) => {
@@ -38,18 +37,16 @@ const DrinkList = (props) => {
 
         return ( drinkList && drinkListInfo ?
         <>
-          <div>
-            <Sticky top={100}>
+            <Sticky top={50}>
               <h2 id='baseIngredientDrinks'>{id}</h2>
             </Sticky>
-          </div>
           <div className='drinkInfo'>
             {drinkListInfo.ingredients.map((drinkListInfoMap,drinkListInfoIdx) => {
               return (
-                <div key={drinkListInfoIdx}> 
-                    <h2>
+                <div key={drinkListInfoIdx} className='drinkInfoDetails'> 
+                    {/* <h2>
                       {drinkListInfoMap.strIngredient}
-                    </h2>
+                    </h2> */}
                     <h3> ABV:   
                       {drinkListInfoMap.strABV}%
                     </h3>

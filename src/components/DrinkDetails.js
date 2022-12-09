@@ -40,8 +40,8 @@ const DrinkDetails = ({drinkName, isSearch}) => {
               </h2>
               <div className="details-container">
                 <img width={150} src={detailsMap.strDrinkThumb}></img>
-                <div className='drinkGlass'>
                   <h3 className='drinkTitle'>{detailsMap.strDrink}</h3>
+                <div className='drinkGlass'>
                   <h4>Preferred Glass:</h4><p>{detailsMap.strGlass}</p>
                 </div>
                 <div className='ingredientList'>

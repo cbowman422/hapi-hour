@@ -55,7 +55,7 @@ return ( spiritList ?
           <RandomDrink />
         </div>
         <div className='pageTitle'>
-          <a href="/search">H-API-HOUR</a>
+          <a href="/search">H-API HOUR</a>
         </div>
         <div className='searchBar'>
           <input type="text" id="myInput" value={searchBarItem} onChange={handleItemChange} />

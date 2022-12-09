@@ -29,7 +29,7 @@ const IngredientOneList = (props) => {
             return (
                   <>
                   <div className=''>
-                        <Sticky top={100}>
+                        <Sticky top={50}>
                               <h2 id='baseIngredients'>Base Ingredient</h2>
                         </Sticky>
                   </div>
@@ -37,11 +37,11 @@ const IngredientOneList = (props) => {
                         {props.spirit.map((search,searchIdx) => {
                               return (
                                     <Link to={`/drinks/${search.strIngredient1}`} key={searchIdx} className='ingredientCard'>
-                                          <div className='ingredientName'>
-                                                <h4>{search.strIngredient1}</h4>
-                                          </div>
                                           <div>
                                                 <img width={150} src={`https://www.thecocktaildb.com/images/ingredients/${search.strIngredient1}.png`} ></img>
+                                          </div>
+                                          <div className='ingredientName'>
+                                                <h4>{search.strIngredient1}</h4>
                                           </div>
                                     </Link>
                               )

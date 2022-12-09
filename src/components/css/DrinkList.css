@@ -1,4 +1,4 @@
-.sticky-inner-wrapper h2{
+.sticky-outer-wrapper h2{
   display: flex;
   justify-content: center;
   align-content: center;
@@ -27,7 +27,17 @@
   justify-content: center;
   align-content: space-around;
 }
-
+.drinkInfoDetails{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100vh;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.drinkInfoDetails h3{
+  width: 100%;
+}
 /* Cocktails Page CSS */
 .componentCSS {
     display: inline-block;
