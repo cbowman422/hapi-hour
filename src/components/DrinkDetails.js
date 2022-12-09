@@ -1,7 +1,7 @@
 import React from 'react'
 import {useState, useEffect} from 'react';
 import { useParams } from 'react-router';
-import "./css/DrinkDetails.css"
+import "../css/DrinkDetails.css"
 
 // Componenent function.
 const DrinkDetails = ({drinkName, isSearch}) => 

@@ -2,7 +2,7 @@ import React from 'react'
 import {useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { useParams } from 'react-router-dom'
-import "./css/DrinkList.css"
+import "../css/DrinkList.css"
 import Sticky from 'react-stickynode';
 
 // Componenent function.
