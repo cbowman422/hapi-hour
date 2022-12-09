@@ -1,51 +1,75 @@
+:root {
+    --bg-color: #FFFCF2;
+    --dark-color: #252422;
+    --light-color: #CCC5B9;
+    --primary-color: #252422;
+    --secondary-color: #403D39;
+    --highlight-color: #5E548E;
+    --transition: all 0.3s ease-in-out;
+}
+/* color: var(--secondary-color); */
 
 .header {
   display: flex;
-  font-family: 'Maven Pro', sans-serif;
-  font-size: 32px;
-  margin: 0;
-  display: flex;
-  align-content: center;
+  flex-flow: row nowrap;
+  align-items: center;
   justify-content: space-between;
+  gap: 30px;
   background: rgb(47,38,38);
-  height: 50px;
-  position: sticky;
+  font-family: 'Bebas Neue', cursive;
+  font-size: 32px;
+  color:	#c5aa6a;
+  margin: 0;
   top: 0;
-  z-index: 2;
+  height: 50px;
   width: 100%;
+  position: sticky;
+  z-index: 2;
 }
+.random{
+  justify-self: flex-start;
+  padding-right: 180px;
+}
+.pageTitle{
+  justify-self: center;
+  min-width: 120px;
+}
+.searchBar{
+  justify-self: flex-end;
+  min-width: 300px;
+}
+
 .header a {
-  margin: 10px 0 0 10px;
   color:	#c5aa6a;
   text-decoration: none;
 }
 .header input {
   height: 16px;
-  margin: 15px 15px 0 0;
 }
 
 /* Home Page CSS */
 .container{
-  display: grid;
-  font-family: 'Maven Pro', sans-serif;
+  font-family: 'Bebas Neue', cursive;
   color: #c5aa6a;
 }
 .homeContainer{
   width: 100%;
+  height: 900px;
   background: black;
   overflow: hidden;
+  box-shadow: rgba(8, 8, 8, 0.596) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
 .homeContainer h1 {
   color: whitesmoke;
   margin: 0;
   font-size: 128px;
   position: absolute;
-  top: 50%;
+  top: 45%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 .homeContainer img {
-  height: 950px;
+  height: 900px;
   width: 100%;
   opacity: 0.5;
 }
@@ -57,40 +81,24 @@
   align-content: center;
   color: white;
   position: absolute;
-  top: 75%;
+  top: 65%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 1;
   text-decoration: none;
   cursor: pointer;
 }
-
-/* Cocktails Page CSS */
-/* .componentCSS {
-  display: inline-block;
-  border-radius: 5px;
-  min-height: 150px;
-  min-width: 150px;
-  width: 150px;
-  margin: 10px;
-  padding: 5px;
-  text-decoration: none;
-  margin-left: 50px;
-}
-.componentCSS img{
-  background-color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 150px;
-}
-.cardTitle {
-  background-color:#404040;
+.searchName{
+  font-family: 'Bebas Neue', cursive;
+  background: none;
   color: #c5aa6a;
-  font-weight: bold;
-  padding: 5px;
-  height: 50px;
-  font-size: 16px;
-  text-align: left;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-}*/
+  border-color: #c5aa6a;
+  cursor: pointer;
+}
+.searchBase{
+  font-family: 'Bebas Neue', cursive;
+  background: none;
+  color: #c5aa6a;
+  border-color: #c5aa6a;
+  cursor: pointer;
+}

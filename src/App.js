@@ -10,7 +10,7 @@ import RandomDrink from './components/RandomDrink';
 import { Link } from 'react-router-dom';
 
 // Component function.
-function App() 
+function App()
 {
 
 // State variables.
@@ -68,7 +68,7 @@ function App()
     {
       setSpiritList(json.drinks)
     })
-    .catch(console.error) 
+    .catch(console.error)
   }, []);
  
 // Conditional return.
@@ -109,5 +109,4 @@ function App()
 }
 
 export default App;
-
 
