@@ -9,30 +9,25 @@ import Sticky from 'react-stickynode';
 const DrinkList = ({ingredientName, isSearchIngredient}) => {
 
 
+  let { id } = useParams();
 
+  // Defining state of drink list & conditional statement for search by ingredients vs search by clicking link in
+  const [drinkList , setDrinkList] = useState(null)
+  const ingredientUrlDrinkList = `https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${ingredientName}`
+  const drinkNameUrlDrinkList = `https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${id}`
+  const url = isSearchIngredient ? ingredientUrlDrinkList : drinkNameUrlDrinkList
 
-    let { id } = useParams();
+  useEffect(() => {
+      
+      fetch(url)
+      .then((response) => response.json())
+      .then((json) => {
+        setDrinkList(json)
+        console.log(url)
+      })
+      .catch(console.error) 
+    }, [isSearchIngredient]);
 
-
-
-
-    // Defining state of drink list & conditional statement for search by ingredients vs search by clicking link in
-    const [drinkList , setDrinkList] = useState(null)
-    const ingredientUrlDrinkList = `https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${ingredientName}`
-    const drinkNameUrlDrinkList = `https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${id}`
-    const url = isSearchIngredient ? ingredientUrlDrinkList : drinkNameUrlDrinkList
-  
-    useEffect(() => {
-        
-        fetch(url)
-        .then((response) => response.json())
-        .then((json) => {
-          setDrinkList(json)
-          console.log(url)
-        })
-        .catch(console.error) 
-      }, [isSearchIngredient]);
- 
 
 
 
