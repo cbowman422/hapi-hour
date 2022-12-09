@@ -32,9 +32,6 @@ const DrinkList = ({ingredientName, isSearchIngredient}) => {
 
 
 
-
-
-
       // this is for the description of tha alchohol type and ABV in drinks list page
       const [drinkListInfo , setDrinkListInfo] = useState(null)
       // const ingredientUrlInfo = `https://www.thecocktaildb.com/api/json/v1/1/search.php?i=${ingredientName}`
