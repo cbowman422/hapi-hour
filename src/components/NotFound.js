@@ -9,7 +9,7 @@ const NotFound = () =>
 // State variables
     const [notFound , setNotFound] = useState(null)
     
-// Fetches API and stores it as json in state.
+// Fetches API and stores it as json in state at page load.
   useEffect(() => 
   {
       const url = `https://www.thecocktaildb.com/api/json/v1/1/random.php`;
