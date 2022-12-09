@@ -4,7 +4,7 @@ import Sticky from 'react-stickynode';
 import "./css/IngredientOneList.css"
 
 // Componenent function.
-const IngredientOneList = (props) =>
+const IngredientOneList = (props) => 
 {
 
 // Function to scroll down in Home screen from click.
@@ -42,7 +42,7 @@ const IngredientOneList = (props) =>
                               </Sticky>
                         </div>
                         <section className="ingredientsContainer">
-                              {props.spirit.map((search,searchIdx) =>
+                              {props.spirit.map((search,searchIdx) => 
                                     {
                                           return (
                                                 <Link to={`/drinks/${search.strIngredient1}`} key={searchIdx} className='ingredientCard'>
@@ -55,7 +55,7 @@ const IngredientOneList = (props) =>
                                                 </Link>
                                                 )
                                     })
-                              }
+                              } 
                         </section>
                         </>
                   )
@@ -74,7 +74,7 @@ const IngredientOneList = (props) =>
             )
 }
 
-      export default IngredientOneList
+export default IngredientOneList
 
 
 

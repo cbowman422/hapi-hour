@@ -3,29 +3,29 @@ import { Link } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 
 // Componenent function.
-const NotFound = () =>
+const NotFound = () => 
 {
 
 // State variables.
     const [notFound , setNotFound] = useState(null)
-
+    
 // Fetches API and stores it as json in state at page load.
-  useEffect(() =>
+  useEffect(() => 
   {
       const url = `https://www.thecocktaildb.com/api/json/v1/1/random.php`;
       fetch(url)
       .then((response) => response.json())
-      .then((json) =>
+      .then((json) => 
       {
         setNotFound(json)
       })
-      .catch(console.error)
+      .catch(console.error) 
     }, []);
 
 // Conditional return.
   return ( notFound ?
     <div>
-      {notFound.drinks.map((notFoundMap,notFoundIdx) =>
+      {notFound.drinks.map((notFoundMap,notFoundIdx) => 
         {
           return (
             <div className='container' key={notFoundIdx}>
@@ -37,7 +37,7 @@ const NotFound = () =>
             </div>
                 )
         })
-      }
+      } 
     </div>
   :
     <p> loading .. </p>

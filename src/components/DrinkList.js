@@ -6,7 +6,7 @@ import "./css/DrinkList.css"
 import Sticky from 'react-stickynode';
 
 // Componenent function.
-const DrinkList = ({ingredientName, isSearchIngredient}) =>
+const DrinkList = ({ingredientName, isSearchIngredient}) => 
 {
 
 // Id variable from URL.
@@ -23,15 +23,15 @@ const DrinkList = ({ingredientName, isSearchIngredient}) =>
   const drinkNameUrlInfo = `https://www.thecocktaildb.com/api/json/v1/1/search.php?i=${id}`;
 
 // Fetches API for drinks list and stores it as json in state everytime isSearchIngredient returns true.
-  useEffect(() =>
+  useEffect(() => 
   {
       fetch(url)
       .then((response) => response.json())
-      .then((json) =>
+      .then((json) => 
       {
         setDrinkList(json)
       })
-      .catch(console.error)
+      .catch(console.error) 
   }, [isSearchIngredient]);
 
 // Fetches API for alcohol info and stores it as json in state everytime isSearchIngredient returns true.
@@ -41,9 +41,9 @@ const DrinkList = ({ingredientName, isSearchIngredient}) =>
       .then((json) => {
         setDrinkListInfo(json.ingredients)
       })
-      .catch(console.error)
+      .catch(console.error) 
     }, [isSearchIngredient]);
-
+   
 // Conditional return.
   return ( drinkList && drinkListInfo ?
     <>
@@ -53,14 +53,14 @@ const DrinkList = ({ingredientName, isSearchIngredient}) =>
         </Sticky>
       </div>
       <div className='drinkInfo'>
-        {drinkListInfo.map((drinkListInfoMap,drinkListInfoIdx) =>
+        {drinkListInfo.map((drinkListInfoMap,drinkListInfoIdx) => 
           {
             return (
-              <div key={drinkListInfoIdx}>
+              <div key={drinkListInfoIdx}> 
                 <h2>
                   {drinkListInfoMap.strIngredient}
                 </h2>
-                <h3> ABV:
+                <h3> ABV:   
                   {drinkListInfoMap.strABV}%
                 </h3>
                 <h3>
@@ -76,11 +76,11 @@ const DrinkList = ({ingredientName, isSearchIngredient}) =>
           <a href={`/search`}><i className="backLink"></i>Change Base Ingredient</a>
         </h2>
         <section className='drinkList'>
-          {drinkList.drinks.map((drinkListMap,drinkListIdx) =>
+          {drinkList.drinks.map((drinkListMap,drinkListIdx) => 
             {
               return (
                 <Link to={`/drinks-details/${drinkListMap.idDrink}`} key={drinkListIdx} className='componentCSS'>
-                  <div>
+                  <div>        
                     <img width={150} src={drinkListMap.strDrinkThumb}></img>
                   </div>
                   <div className="cardTitle">
@@ -90,7 +90,7 @@ const DrinkList = ({ingredientName, isSearchIngredient}) =>
                      )
             })
           }
-        </section>
+        </section> 
       </div>
     </>
   :
