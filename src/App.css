@@ -1,7 +1,7 @@
 
 .header {
   display: flex;
-  font-family: 'Maven Pro', sans-serif;
+  font-family: 'Bebas Neue', cursive;
   font-size: 32px;
   margin: 0;
   display: flex;
@@ -27,7 +27,7 @@
 /* Home Page CSS */
 .container{
   display: grid;
-  font-family: 'Maven Pro', sans-serif;
+  font-family: 'Bebas Neue', cursive;
   color: #c5aa6a;
 }
 .homeContainer{
@@ -67,12 +67,14 @@
   cursor: pointer;
 }
 .searchName{
+  font-family: 'Bebas Neue', cursive;
   background: none;
   color: #c5aa6a;
   border-color: #c5aa6a;
   cursor: pointer;
 }
 .searchBase{
+  font-family: 'Bebas Neue', cursive;
   background: none;
   color: #c5aa6a;
   border-color: #c5aa6a;

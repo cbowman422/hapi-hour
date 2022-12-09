@@ -46,7 +46,7 @@ function App() {
 
   // Handles search bar
   const handleItemChange = (e) => {
-    const newSearchItem = e.target.value.toUpperCase()
+    const newSearchItem = e.target.value
     setSearchBarItem(newSearchItem)
   }
 

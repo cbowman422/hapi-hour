@@ -28,19 +28,19 @@ const DrinkList = ({ingredientName, isSearchIngredient}) => {
 
       // Drink List Info
       const [drinkListInfo , setDrinkListInfo] = useState(null)
-      const ingredientUrlInfo = `https://www.thecocktaildb.com/api/json/v1/1/search.php?i=${ingredientName}`
+      //const ingredientUrlInfo = `https://www.thecocktaildb.com/api/json/v1/1/search.php?i=${ingredientName}`
       const drinkNameUrlInfo = `https://www.thecocktaildb.com/api/json/v1/1/search.php?i=${id}`;
-      const urlInfo = isSearchIngredient ? ingredientUrlInfo : drinkNameUrlInfo
+      //const urlInfo = isSearchIngredient ? ingredientUrlInfo : drinkNameUrlInfo
       
       // const urlInfo = `https://www.thecocktaildb.com/api/json/v1/1/search.php?i=${id}`;
       useEffect(() => {
-          fetch(urlInfo)
+          fetch(drinkNameUrlInfo)
           .then((response) => response.json())
           .then((json) => {
             setDrinkListInfo(json)
           })
           .catch(console.error) 
-        }, []);
+        }, [isSearchIngredient]);
    
 
         return ( drinkList && drinkListInfo ?
