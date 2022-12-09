@@ -10,12 +10,10 @@ const DrinkList = ({ingredientName, isSearchIngredient}) => {
 
     let { id } = useParams();
 
+    // Drink List
     const [drinkList , setDrinkList] = useState(null);
-
     const ingredientUrlDrinkList = `https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${ingredientName}`
-
     const drinkNameUrlDrinkList = `https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${id}`
-  
     const url = isSearchIngredient ? ingredientUrlDrinkList : drinkNameUrlDrinkList
     
     useEffect(() => {
@@ -26,13 +24,12 @@ const DrinkList = ({ingredientName, isSearchIngredient}) => {
         })
         .catch(console.error) 
       }, [isSearchIngredient]);
- 
-      const [drinkListInfo , setDrinkListInfo] = useState(null)
-    
-      const ingredientUrlInfo = `https://www.thecocktaildb.com/api/json/v1/1/search.php?i=${ingredientName}`
+      
 
+      // Drink List Info
+      const [drinkListInfo , setDrinkListInfo] = useState(null)
+      const ingredientUrlInfo = `https://www.thecocktaildb.com/api/json/v1/1/search.php?i=${ingredientName}`
       const drinkNameUrlInfo = `https://www.thecocktaildb.com/api/json/v1/1/search.php?i=${id}`;
-   
       const urlInfo = isSearchIngredient ? ingredientUrlInfo : drinkNameUrlInfo
       
       // const urlInfo = `https://www.thecocktaildb.com/api/json/v1/1/search.php?i=${id}`;
@@ -67,10 +64,7 @@ const DrinkList = ({ingredientName, isSearchIngredient}) => {
                   </div>
               )
             })}
-
-        </div>
-
-
+          </div>
           <div className='ingredientSection'>
             <h2 className='backBox'>
               <a href={`/search`}><i className="backLink"></i>Change Base Ingredient</a>

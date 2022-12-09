@@ -13,13 +13,11 @@ function App() {
 
 
   const [searchBarItem, setSearchBarItem] = useState('')
-
   const [spiritList, setSpiritList] = useState([])
-
   const [isSearch, setIsSearch] = useState(false)
   const [isSearchIngredient, setIsSearchIngredient] = useState(false)
 
-
+  // Search By Name
   const nameClick = () => {
     setIsSearch(current => !current)
     if (setIsSearch) {
@@ -32,7 +30,7 @@ function App() {
 
     }
   }
-
+  // Search By Ingredient
   const ingredientClick = () => {
     setIsSearchIngredient(current => !current)
     if (setIsSearchIngredient) {
@@ -46,11 +44,13 @@ function App() {
     }
   }
 
+  // Handles search bar
   const handleItemChange = (e) => {
     const newSearchItem = e.target.value.toUpperCase()
     setSearchBarItem(newSearchItem)
   }
 
+  // Fetches Base Ingredients
   useEffect(() => {
     const url = "https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list";
     fetch(url)
@@ -73,12 +73,12 @@ return ( spiritList ?
         </div>
         <div className='searchBar'>
           <input type="text" id="myInput" value={searchBarItem} onChange={handleItemChange} placeholder='Search Cocktail..' />
-          <Link to={'/drinks-details/'}> 
+          <Link to={`/drinks-details/${searchBarItem}`}> 
             <button onClick={nameClick} className="searchName"> 
               by name
             </button>
           </Link>
-          <Link to={`/drinks/`}> 
+          <Link to={`/drinks/${searchBarItem}`}> 
               <button onClick={ingredientClick} className="searchBase"> 
                by base
               </button>
@@ -90,10 +90,8 @@ return ( spiritList ?
         <Routes>
           <Route path='/' element={<IngredientOneList spirit={spiritList} visitProp={false}/>} />
           <Route path='/search/' element={<IngredientOneList spirit={spiritList} visitProp={true}/>} />
-          <Route path='/drinks/' element={ <DrinkList ingredientName={searchBarItem} isSearchIngredient={isSearchIngredient} /> }/>
-          <Route path='/drinks/:id' element={ <DrinkList />} />
-          <Route path='/drinks-details/' element={ <DrinkDetails drinkName={searchBarItem} isSearch={isSearch} /> } />
-          <Route path='/drinks-details/:id' element={ <DrinkDetails /> } />
+          <Route path='/drinks/:id' element={ <DrinkList ingredientName={searchBarItem} isSearchIngredient={isSearchIngredient}/>} />
+          <Route path='/drinks-details/:id' element={ <DrinkDetails drinkName={searchBarItem} isSearch={isSearch}/> } />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </div>
