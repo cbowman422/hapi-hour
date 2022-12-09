@@ -3,17 +3,17 @@ import {useState, useEffect} from 'react';
 import { useParams } from 'react-router';
 import "./css/DrinkDetails.css"
 
-// Componenent function
+// Componenent function.
 const DrinkDetails = ({drinkName, isSearch}) => 
 {
 
-// Id variable from URL
+// Id variable from URL.
   let { id } = useParams();
 
-// State variables 
+// State variables.
   const [drinkDetail, setDrinkDetail] = useState(null)
 
-// Conditional variables for drink details by name search vs drink details by link click
+// Conditional variables for drink details by name search vs drink details by link click.
   const ingredientUrl = `lookup.php?i=${id}`
   const drinkNameUrl = `search.php?s=${drinkName}`
   const baseUrl = 'https://www.thecocktaildb.com/api/json/v1/1/'
@@ -21,10 +21,12 @@ const DrinkDetails = ({drinkName, isSearch}) =>
   const url = baseUrl + specUrl;
 
 // Fetches API and stores it as json in state everytime isSearch returns true.
-  useEffect(() => {
+  useEffect(() => 
+  {
       fetch(url)
       .then((res) => res.json())
-      .then((json) => {
+      .then((json) => 
+      {
           setDrinkDetail(json.drinks)
       })
       .catch(console.error)

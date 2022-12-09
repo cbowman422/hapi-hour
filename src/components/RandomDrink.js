@@ -2,19 +2,20 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 
-// Componenent function
+// Componenent function.
 const RandomDrink = () => 
 {
 
-// State variables    
+// State variables.    
   const [refreshPage] = useState(false)
   const [randomDrink , setRandomDrink] = useState(null)
 
-// Function that refreshes the state, thus re rendering the useEffect
+// Function that refreshes the state, thus re rendering the useEffect.
   const refreshPageFunction = () => 
   {
     refreshPage(current => !current)
-      setTimeout(function() {
+      setTimeout(function() 
+      {
         refreshPage(current => !current)
       }, 1);
   }
@@ -25,7 +26,8 @@ const RandomDrink = () =>
       const url = `https://www.thecocktaildb.com/api/json/v1/1/random.php`;
       fetch(url)
       .then((response) => response.json())
-      .then((json) => {
+      .then((json) => 
+      {
         setRandomDrink(json)
       })
       .catch(console.error) 

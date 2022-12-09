@@ -2,11 +2,11 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 
-// Componenent function
+// Componenent function.
 const NotFound = () => 
 {
 
-// State variables
+// State variables.
     const [notFound , setNotFound] = useState(null)
     
 // Fetches API and stores it as json in state at page load.
@@ -15,13 +15,14 @@ const NotFound = () =>
       const url = `https://www.thecocktaildb.com/api/json/v1/1/random.php`;
       fetch(url)
       .then((response) => response.json())
-      .then((json) => {
+      .then((json) => 
+      {
         setNotFound(json)
       })
       .catch(console.error) 
     }, []);
 
-// Conditional return
+// Conditional return.
   return ( notFound ?
     <div>
       {notFound.drinks.map((notFoundMap,notFoundIdx) => 
