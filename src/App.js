@@ -17,6 +17,7 @@ function App() {
   const [spiritList, setSpiritList] = useState([])
 
   const [isSearch, setIsSearch] = useState(false)
+  const [isSearchIngredient, setIsSearchIngredient] = useState(false)
 
 
   const nameClick = () => {
@@ -32,8 +33,21 @@ function App() {
     }
   }
 
+  const ingredientClick = () => {
+    setIsSearchIngredient(current => !current)
+    if (setIsSearchIngredient) {
+
+      setTimeout(function() {
+        setIsSearchIngredient(current => !current)
+         }, 1);
+
+    } else {
+
+    }
+  }
+
   const handleItemChange = (e) => {
-    const newSearchItem = e.target.value
+    const newSearchItem = e.target.value.toUpperCase()
     setSearchBarItem(newSearchItem)
   }
 
@@ -58,11 +72,16 @@ return ( spiritList ?
           <a href="/search">H-API HOUR</a>
         </div>
         <div className='searchBar'>
-          <input type="text" id="myInput" value={searchBarItem} onChange={handleItemChange} />
+          <input type="text" id="myInput" value={searchBarItem} onChange={handleItemChange} placeholder='Cocktail name' />
           <Link to={'/drinks-details/'}> 
             <button onClick={nameClick}> 
-              by name
+              search name
             </button>
+          </Link>
+          <Link to={'/drinks/'}> 
+              <button onClick={ingredientClick}> 
+               search ing
+              </button>
           </Link>
         </div>
     </header>
@@ -71,6 +90,7 @@ return ( spiritList ?
         <Routes>
           <Route path='/' element={<IngredientOneList spirit={spiritList} visitProp={false}/>} />
           <Route path='/search/' element={<IngredientOneList spirit={spiritList} visitProp={true}/>} />
+          <Route path='/drinks/' element={ <DrinkList ingredientName={searchBarItem} isSearchIngredient={isSearchIngredient} /> }/>
           <Route path='/drinks/:id' element={ <DrinkList />} />
           <Route path='/drinks-details/' element={ <DrinkDetails drinkName={searchBarItem} isSearch={isSearch} /> } />
           <Route path='/drinks-details/:id' element={ <DrinkDetails /> } />
