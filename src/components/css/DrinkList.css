@@ -23,8 +23,9 @@
 }
 .drinkList{
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  flex-wrap: wrap; 
+  flex-direction: row;
+  justify-content: flex-start;
   align-content: space-around;
 }
 .drinkInfoDetails{
