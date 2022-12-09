@@ -3,65 +3,77 @@ import { Link } from 'react-router-dom'
 import Sticky from 'react-stickynode';
 import "./css/IngredientOneList.css"
 
+// Componenent function.
+const IngredientOneList = (props) => 
+{
 
-const IngredientOneList = (props) => {
-
-      function scrollToList(){
-            window.scrollTo({
+// Function to scroll down in Home screen from click.
+      function scrollToList()
+      {
+            window.scrollTo(
+            {
                   top: 940,
                   behavior:"smooth"
             })
       }
 
-      function Home(){
+// Function to display when at / path.
+      function Home()
+      {
             return (
-              <div className='homeContainer'>
-                <img src='https://imgur.com/jFROHy1.jpg'/>
-                <div className='homeText'>
-                  <h1>WELCOME</h1>
-                  <a onClick={scrollToList}><h2>MENU</h2></a>
-                </div>
-              </div>
+                  <div className='homeContainer'>
+                        <img src='https://imgur.com/jFROHy1.jpg'/>
+                        <div className='homeText'>
+                              <h1>WELCOME</h1>
+                              <a onClick={scrollToList}><h2>MENU</h2></a>
+                        </div>
+                  </div>
             )
       }
 
-      function Ingredients(){
+// Function to display when at /search path.
+      function Ingredients()
+      {
             return (
                   <>
-                  <div className=''>
-                        <Sticky top={100}>
-                              <h2 id='baseIngredients'>Base Ingredient</h2>
-                        </Sticky>
-                  </div>
-                  <section className="ingredientsContainer">
-                        {props.spirit.map((search,searchIdx) => {
-                              return (
-                                    <Link to={`/drinks/${search.strIngredient1}`} key={searchIdx} className='ingredientCard'>
-                                          <div className='ingredientName'>
-                                                <h4>{search.strIngredient1}</h4>
-                                          </div>
-                                          <div>
-                                                <img width={150} src={`https://www.thecocktaildb.com/images/ingredients/${search.strIngredient1}.png`} ></img>
-                                          </div>
-                                    </Link>
-                              )
-                        })} 
-                  </section>
-                  </>
-            )
+                        <div className=''>
+                              <Sticky top={100}>
+                                    <h2 id='baseIngredients'>Base Ingredient</h2>
+                              </Sticky>
+                        </div>
+                        <section className="ingredientsContainer">
+                              {props.spirit.map((search,searchIdx) => 
+                                    {
+                                          return (
+                                                <Link to={`/drinks/${search.strIngredient1}`} key={searchIdx} className='ingredientCard'>
+                                                      <div>
+                                                            <img width={150} src={`https://www.thecocktaildb.com/images/ingredients/${search.strIngredient1}.png`} ></img>
+                                                      </div>
+                                                      <div className='ingredientName'>
+                                                            <h4>{search.strIngredient1}</h4>
+                                                      </div>
+                                                </Link>
+                                                )
+                                    })
+                              } 
+                        </section>
+                        </>
+                  )
       }
 
+// Conditional return.
       return ( !props.visitProp ?
             <>
-            <Home />
-            <Ingredients />
+                  <Home />
+                  <Ingredients />
             </>
       :
             <>
-            <Ingredients />
+                  <Ingredients />
             </>
-      )
+            )
 }
+
 export default IngredientOneList
 
 
