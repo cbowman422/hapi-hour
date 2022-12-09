@@ -48,7 +48,7 @@ const DrinkList = ({ingredientName, isSearchIngredient}) =>
   return ( drinkList && drinkListInfo ?
     <>
       <div>
-        <Sticky top={100}>
+        <Sticky top={50}>
           <h2 id='baseIngredients'> {id} </h2>
         </Sticky>
       </div>
