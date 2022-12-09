@@ -32,7 +32,7 @@ function refreshPage(){
      return (
 
     <div className='random' key={randomDrinkIdx}>
-      <Link to={`/drinks-details/${randomDrinkMap.idDrink}`} onClick={refreshPage} > Randomize!
+      <Link to={`/drinks-details/${randomDrinkMap.idDrink}`} onClick={refreshPage} > RANDOM
       </Link>
     </div>
 

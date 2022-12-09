@@ -72,15 +72,15 @@ return ( spiritList ?
           <a href="/search">H-API HOUR</a>
         </div>
         <div className='searchBar'>
-          <input type="text" id="myInput" value={searchBarItem} onChange={handleItemChange} placeholder='Cocktail name' />
+          <input type="text" id="myInput" value={searchBarItem} onChange={handleItemChange} placeholder='Search Cocktail..' />
           <Link to={'/drinks-details/'}> 
             <button onClick={nameClick} className="searchName"> 
-              search name
+              by name
             </button>
           </Link>
-          <Link to={'/drinks/'}> 
+          <Link to={`/drinks/`}> 
               <button onClick={ingredientClick} className="searchBase"> 
-               search base
+               by base
               </button>
           </Link>
         </div>

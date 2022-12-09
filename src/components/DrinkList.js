@@ -25,7 +25,7 @@ const DrinkList = ({ingredientName, isSearchIngredient}) => {
           setDrinkList(json)
         })
         .catch(console.error) 
-      }, []);
+      }, [isSearchIngredient]);
  
       const [drinkListInfo , setDrinkListInfo] = useState(null)
     
