@@ -66,33 +66,15 @@
   text-decoration: none;
   cursor: pointer;
 }
-
-/* Cocktails Page CSS */
-/* .componentCSS {
-  display: inline-block;
-  border-radius: 5px;
-  min-height: 150px;
-  min-width: 150px;
-  width: 150px;
-  margin: 10px;
-  padding: 5px;
-  text-decoration: none;
-  margin-left: 50px;
-}
-.componentCSS img{
-  background-color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 150px;
-}
-.cardTitle {
-  background-color:#404040;
+.searchName{
+  background: none;
   color: #c5aa6a;
-  font-weight: bold;
-  padding: 5px;
-  height: 50px;
-  font-size: 16px;
-  text-align: left;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-}*/
+  border-color: #c5aa6a;
+  cursor: pointer;
+}
+.searchBase{
+  background: none;
+  color: #c5aa6a;
+  border-color: #c5aa6a;
+  cursor: pointer;
+}

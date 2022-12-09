@@ -74,13 +74,13 @@ return ( spiritList ?
         <div className='searchBar'>
           <input type="text" id="myInput" value={searchBarItem} onChange={handleItemChange} placeholder='Cocktail name' />
           <Link to={'/drinks-details/'}> 
-            <button onClick={nameClick}> 
+            <button onClick={nameClick} className="searchName"> 
               search name
             </button>
           </Link>
           <Link to={'/drinks/'}> 
-              <button onClick={ingredientClick}> 
-               search ing
+              <button onClick={ingredientClick} className="searchBase"> 
+               search base
               </button>
           </Link>
         </div>
