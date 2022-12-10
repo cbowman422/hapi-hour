@@ -1,0 +1,185 @@
+
+:root
+{
+  --dark: #2f2626;
+  --mid: #4c3c3c;
+  --light: #5f4c4c;
+  --grey: #404040;
+  --yellow: #c5aa6a;
+  --dark-color: #252422;
+  --light-color: #CCC5B9;
+  --transition: all 0.3s ease-in-out;
+}
+
+/* Home Page CSS */
+.container
+{
+  font-family: 'Bebas Neue', cursive;
+  color: var(--yellow);
+}
+
+.homeContainer
+{
+  width: 100%;
+  height: 900px;
+  background: black;
+  overflow: hidden;
+  box-shadow: rgba(8, 8, 8, 0.596) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.homeContainer h1
+{
+  color: whitesmoke;
+  margin: 0;
+  font-size: 128px;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.homeContainer img
+{
+  height: 900px;
+  width: 100%;
+  opacity: 0.5;
+}
+
+.homeContainer a
+{
+  display: flex;
+  border: solid;
+  padding: 0px 15px 0px 15px;
+  justify-content: center;
+  align-content: center;
+  color: white;
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Header */
+#sticky.header
+{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 76px;
+  grid-column-gap: 20px;
+  background: rgb(47,38,38);
+  font-family: 'Bebas Neue', cursive;
+  font-size: 36px;
+  top: 0;
+  height: 76px;
+  max-height: 100%;
+  width: 100%;
+  position: sticky;
+  z-index: 2;
+}
+
+/* Randomize */
+.randomDrinkBtn
+{
+  max-width: 200px;
+  height: 76px;
+  max-height: 76px;
+  grid-column: 1;
+  justify-self: start;
+  padding-left: 20px;
+}
+
+.random
+{
+  max-width: 200px;
+  grid-column: 1;
+  justify-self: start;
+  filter: brightness(100%);
+  transition: filter .5s;
+}
+
+.random p
+{
+  font-size: 16px;
+  margin: -10px 0 0 15px;
+}
+
+.random:hover
+{
+  filter: brightness(120%);
+}
+
+/* Page Title */
+.pageTitle
+{
+  grid-column: 2;
+  align-self: center;
+  justify-self: center;
+  width: 230px;
+  font-size: 72px;
+  color: var(--yellow);
+  filter: brightness(100%);
+  transition: filter .5s;
+}
+
+.pageTitle:hover
+{
+  filter: brightness(120%);
+}
+
+.apiHighlight
+{
+  color: rgb(238, 217, 165);
+}
+
+.header a
+{
+  color:	var(--yellow);
+  text-decoration: none;
+  /* height: 0px; */
+}
+
+/* Search Bar */
+.searchBar
+{
+  grid-column: 3;
+  width: 180px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: end;
+  justify-self: end;
+  align-self: center;
+  margin-right: 15px;
+  margin-top: 10px;
+}
+
+.searchBar a
+{
+  margin-top: 5px;
+  display: flex;
+}
+
+button, .searchBase, .searchName
+{
+  padding: 2px 4px;
+  border: 2px solid transparent;
+  background-color: transparent;
+  color: var(--bg-color);
+  filter: brightness(100%);
+  transition: filter .5s;
+  transition: var(--transition);
+  cursor: pointer;
+  font-family: 'Bebas Neue', cursive;
+  letter-spacing: 0.07rem;
+}
+
+button:hover
+{
+  filter: brightness(120%);
+  /* background-color: var(--secondary-color); */
+  /* color: var(--light-color); */
+  border: 2px solid var(--yellow);
+  border-radius: 0.5rem;
+}

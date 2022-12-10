@@ -35,18 +35,20 @@ const RandomDrink = () =>
   
 // Conditional return
   return ( randomDrink ?
-    <div>
+    <>
       {randomDrink.drinks.map((randomDrinkMap,randomDrinkIdx) =>
         {
           return (
             <div className='random' key={randomDrinkIdx}>
-              <Link to={`/drinks-details/${randomDrinkMap.idDrink}`} onClick={refreshPageFunction} > Randomize!
+              <Link to={`/drinks-details/${randomDrinkMap.idDrink}`} onClick={refreshPageFunction} >
+                <img height={48} src='https://imgur.com/Qhx44CE.png' />
+                <p>Random</p>
               </Link>
             </div>
                  )
         })
       }
-    </div>
+    </>
   :
     <p> </p>
         )

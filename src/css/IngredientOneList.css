@@ -1,5 +1,7 @@
+
 /* Nav Ingredients CSS */
-.baseIngredientContainer h2{
+.baseIngredientContainer h2
+{
   display: flex;
   justify-content: center;
   color: #c5aa6a;
@@ -10,54 +12,55 @@
   position: absolute;
   z-index: 2;
 }
-.baseIngredientContainer{
+
+.baseIngredientContainer
+{
   z-index: 2;
 }
-.ingredientsContainer{
+
+.ingredientsContainer
+{
   display: flex;
   padding-top: 60px;
   padding: 60px 10px 0 10px;
   width: 98%;
-  min-width: 800px;
+  min-width: 600px;
   flex-wrap: wrap;
   justify-content: center;
   align-content: space-around;
 }
-.ingredientCard{
-  display: inline-block;
-  /* flex-flow: column;
-  justify-content: center; */
 
-  min-height: 150px;
-  min-width: 170px;
-  border-radius: 10px;
+.ingredientCard
+{
+  display: inline-block;
+  background-color: var(--grey);
   overflow: hidden;
-  width: 170px;
+  border-radius: 10px;
   margin: 10px;
-  /* padding-top: 90px;
-  padding: 10px; */
+  font-size: 20px;
   text-decoration: none;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
 }
-.ingredientCard img{
+
+.ingredientCard img
+{
   background: url("https://imgur.com/QKJ0bZt.jpg");
-  background-size: 150px 170px;
+  background-size: 170px 170px;
   padding: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
   width: 150px;
 }
-.ingredientName h4{
-  background-color: #404040;
+
+.ingredientName h4
+{
   display: flex;
   justify-content: center;
   align-content: center;
-  color: #c5aa6a;
-  font-weight: bold;
-  padding: 5px;
-  height: 40px;
-  font-size: 16px;
-  text-align: center;
-  margin: 0;
+  color: var(--yellow);
+  transition: var(--transition);
+  cursor: pointer;
+  font-family: 'Bebas Neue', cursive;
+  letter-spacing: 0.07rem;
 }

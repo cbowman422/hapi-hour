@@ -2,7 +2,7 @@ import React from 'react';
 import DrinkDetails from './components/DrinkDetails';
 import IngredientOneList from './components/IngredientOneList';
 import { Route, Routes } from 'react-router-dom'
-import './App.css';
+import './css/App.css';
 import { useState, useEffect } from 'react';
 import DrinkList from './components/DrinkList';
 import NotFound from './components/NotFound';
@@ -54,7 +54,7 @@ function App()
 // Event handler for setting the search bar input to an event and saving that event to state.
   const handleItemChange = (e) =>
   {
-    const newSearchItem = e.target.value.toUpperCase()
+    const newSearchItem = e.target.value
     setSearchBarItem(newSearchItem)
   }
 
@@ -79,7 +79,7 @@ function App()
           <RandomDrink />
         </div>
         <div className='pageTitle'>
-          <a href="/search">h-API-Hour</a>
+          <a href="/search">H<span className='apiHighlight'>API</span> Hour</a>
         </div>
         <div className="searchBar">
           <input type="text" id="myInput" value={searchBarItem} onChange={handleItemChange} placeholder='Search..'/>

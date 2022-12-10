@@ -2,7 +2,7 @@ import React from 'react'
 import {useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { useParams } from 'react-router-dom'
-import "./css/DrinkList.css"
+import "../css/DrinkList.css"
 import Sticky from 'react-stickynode';
 
 // Componenent function.
@@ -48,7 +48,7 @@ const DrinkList = ({ingredientName, isSearchIngredient}) =>
   return ( drinkList && drinkListInfo ?
     <>
       <div>
-        <Sticky top={50}>
+        <Sticky top={76}>
           <h2 id='baseIngredients'> {id} </h2>
         </Sticky>
       </div>
@@ -57,13 +57,13 @@ const DrinkList = ({ingredientName, isSearchIngredient}) =>
           {
             return (
               <div key={drinkListInfoIdx}>
-                <h2>
+                {/* <h2>
                   {drinkListInfoMap.strIngredient}
-                </h2>
+                </h2> */}
                 <h3> ABV:
                   {drinkListInfoMap.strABV}%
                 </h3>
-                <h3>
+                <h3 className='drinkDescription'>
                   {drinkListInfoMap.strDescription}
                 </h3>
               </div>
