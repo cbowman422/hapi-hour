@@ -2,20 +2,21 @@
 .details-container
 {
     display: grid;
-    justify-content: center;
+    /* justify-content: center;
     justify-self: center;
-    align-self: center;
+    align-self: center; */
     grid-template-columns: repeat(5, 110px);
     grid-template-rows: repeat(5, 110px);
     grid-template-areas: 
-      "img img img"
-      "title title title"
-      "glass ingrD ingrD"
-      "mix mix mix"
-      "mix mix mix";
+      "img img img img img"
+      "title title title title title"
+      "glass glass ingrD ingrd ingrd"
+      "mix mix mix mix mix"
+      "mix mix mix mix mix";
     width: 550px;
     min-width: 550px;
     height: 550px;
+    margin: auto;
     background-color: black;
     margin-bottom: 50px;
 }
@@ -52,6 +53,7 @@
   font-size: 48px;
   padding-left: 25px;
   margin: 0;
+  margin-top: -75px;
   grid-area: title;
   min-width: 400px;
   z-index: 1;
@@ -59,8 +61,6 @@
 
 .drinkGlass
 {
-  flex-direction: column;
-  justify-content: top;
   max-height: 100px;
   width: 170px;
   margin: 0;
@@ -68,20 +68,33 @@
   grid-area: glass;
   z-index: 1;
 }
+.drinkGlass h4
+{
+  margin: 0;
+}
 
+/* Ingredients */
 .ingredientList
 {
   align-items: center;
   margin: auto;
-  padding-left: 25px;
+  padding-left: 40px;
   grid-area: ingrD;
+  max-height: 130px;
+  min-width: 270px;
   z-index: 1;
 }
+.ingredientList ul
+{
+  display: inline-flexbox;
+}
+
 .ingredientList h4
 {
   margin: 0;
 }
 
+/* Instructions */
 .mixingInstructions
 {
   margin-bottom: 25px;
@@ -89,6 +102,12 @@
   padding-left: 25px;
   grid-area: mix;
   z-index: 1;
+}
+.mixingInstructions p
+{
+  max-height: 150px;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 /* Back Button */
@@ -157,11 +176,9 @@
   .details-container img
   {
     grid-area: img;
-    /* min-width: 550px;
-    min-height: 550px; */
   }
 
-  .details-container img:hover
+  .details-container:hover
   {
     opacity: 100%;
   }
@@ -176,8 +193,15 @@
     grid-area: glass;
   }
 
+  .drinkGlass h4
+  {
+    margin: 0;
+  }
+
   .ingredientList
   {
+    list-style-type: none;
+    display: block;
     grid-area: ingrD;
   }
   
