@@ -1,4 +1,5 @@
 
+/* Color Palette */
 :root
 {
   --dark: #2f2626;
@@ -132,14 +133,13 @@
 
 .apiHighlight
 {
-  color: rgb(238, 217, 165);
+  color: rgb(240, 217, 159);
 }
 
 .header a
 {
   color:	var(--yellow);
   text-decoration: none;
-  /* height: 0px; */
 }
 
 /* Search Bar */

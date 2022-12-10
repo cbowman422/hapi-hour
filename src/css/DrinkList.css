@@ -1,4 +1,5 @@
 
+/* Ingredient Title */
 .sticky-outer-wrapper h2
 {
   display: flex;
@@ -13,6 +14,7 @@
   z-index: 999;
 }
 
+/* Ingredient Back arrow */
 .backBox a
 {
     font-size: 24px;
@@ -34,6 +36,7 @@
   margin-bottom: 2px;
 }
 
+/* Cocktails */
 .ingredientSection
 {
   margin-top: 80px;
@@ -42,10 +45,8 @@
 .drinkList
 {
   display: flex;
-  flex-wrap: wrap; 
-  flex-direction: row;
-  justify-content: flex-start;
-  align-content: space-around;
+  flex-wrap: wrap;
+  align-content: flex-start;
 }
 
 .drinkInfoDetails
@@ -63,7 +64,7 @@
   width: 100%;
 }
 
-/* Cocktails Page CSS */
+/* Cocktails Cards*/
 .componentCSS
 {
   display: inline-block;
@@ -78,6 +79,12 @@
   margin-left: 50px;
   overflow: hidden;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  color: var(--yellow);
+}
+
+.componentCSS:hover
+{
+  color: #d8bb77;
 }
 
 .componentCSS img

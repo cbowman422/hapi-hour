@@ -1,10 +1,11 @@
+
+/* Full Page CSS INSIDE Media Queries */
+
+
 /* Details Page CSS */
 .details-container
 {
     display: grid;
-    /* justify-content: center;
-    justify-self: center;
-    align-self: center; */
     grid-template-columns: repeat(5, 110px);
     grid-template-rows: repeat(5, 110px);
     grid-template-areas: 
@@ -19,7 +20,7 @@
     margin: auto;
     background-color: black;
     margin-bottom: 50px;
-    transition: all .25s ease-out;
+    transition: all .25s ease-in-out;
 
 }
 
@@ -67,6 +68,7 @@
   grid-area: glass;
   z-index: 1;
 }
+
 .drinkGlass h4
 {
   margin: 0;
@@ -83,6 +85,7 @@
   min-width: 270px;
   z-index: 1;
 }
+
 .ingredientList ul
 {
   display: inline-flexbox;
@@ -94,6 +97,7 @@
 }
 
 /* Instructions */
+
 .mixingInstructions
 {
   margin-bottom: 25px;
@@ -102,6 +106,7 @@
   grid-area: mix;
   z-index: 1;
 }
+
 .mixingInstructions p
 {
   max-height: 150px;
@@ -115,6 +120,7 @@
   margin-right: 15px;
   margin-bottom: 2px;
 }
+
 .detailsBack a
 {
   text-align: center;
@@ -145,7 +151,7 @@
   -webkit-transform: rotate(135deg);
 }
 
-/* Media Queries */
+/* Media Queries (Full Page Default Inside) */
 @media only screen and (min-width: 900px)
 {
   .details-container

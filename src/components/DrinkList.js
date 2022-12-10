@@ -57,9 +57,6 @@ const DrinkList = ({ingredientName, isSearchIngredient}) =>
           {
             return (
               <div key={drinkListInfoIdx}>
-                {/* <h2>
-                  {drinkListInfoMap.strIngredient}
-                </h2> */}
                 <h3 className='abv'> ABV:
                   {drinkListInfoMap.strABV}%
                 </h3>
