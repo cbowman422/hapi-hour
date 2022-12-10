@@ -156,6 +156,24 @@
   margin-top: 10px;
 }
 
+#myInput
+{
+  background-color: var(--yellow);
+  filter: brightness(120%);
+  transition: filter .5s;
+  transition: var(--transition);
+  font-family: 'Bebas Neue', cursive;
+  letter-spacing: 0.07rem;
+  border-radius: 0.3rem;
+}
+
+#myInput:hover
+{
+  filter: brightness(135%);
+  border: 2px solid var(--yellow);
+  border-radius: 0.5rem;
+}
+
 .searchBar a
 {
   margin-top: 5px;

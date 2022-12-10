@@ -19,15 +19,14 @@
     margin: auto;
     background-color: black;
     margin-bottom: 50px;
+    transition: all .25s ease-out;
+
 }
 
 .details-container img
 {
-  opacity: 100%;
-  transition: opacity .5s;
-}
-.details-container img:hover{
   opacity: 50%;
+  transition: opacity .5s;
 }
 
 .details-container img
@@ -176,16 +175,18 @@
   .details-container img
   {
     grid-area: img;
-  }
-
-  .details-container:hover
-  {
     opacity: 100%;
   }
+
+  /* .details-container:hover
+  {
+    opacity: 100%;
+  } */
 
   .drinkTitle
   {
     grid-area: title;
+    margin: 0;
   }
 
   .drinkGlass
@@ -203,6 +204,7 @@
     list-style-type: none;
     display: block;
     grid-area: ingrD;
+    margin-top: 18px;
   }
   
   .mixingInstructions
