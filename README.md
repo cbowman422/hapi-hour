@@ -9,7 +9,7 @@ HAPI Hour an app built to help you find drink recipes from the cocktail db API. 
 [link to PLANNING.md](PLANNING.md)
 
 
-## API Link
+## Link to API
 
 https://www.thecocktaildb.com/
 
