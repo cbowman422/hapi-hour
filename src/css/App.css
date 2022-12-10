@@ -158,7 +158,7 @@
 
 #myInput
 {
-  background-color: var(--yellow);
+  background-color: whitesmoke;
   filter: brightness(120%);
   transition: filter .5s;
   transition: var(--transition);

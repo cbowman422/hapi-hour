@@ -52,22 +52,6 @@ const DrinkList = ({ingredientName, isSearchIngredient}) =>
           <h2 id='baseIngredients'> {id} </h2>
         </Sticky>
       </div>
-      <div className='drinkInfo'>
-        {drinkListInfo.map((drinkListInfoMap,drinkListInfoIdx) =>
-          {
-            return (
-              <div key={drinkListInfoIdx}>
-                <h3 className='abv'> ABV:
-                  {drinkListInfoMap.strABV}%
-                </h3>
-                <h3 className='drinkDescription'>
-                  {drinkListInfoMap.strDescription}
-                </h3>
-              </div>
-                   )
-          })
-        }
-      </div>
       <div className='ingredientSection'>
         <h2 className='backBox'>
           <a href={`/search`}><i className="backLink"></i>Change Base Ingredient</a>
@@ -88,6 +72,22 @@ const DrinkList = ({ingredientName, isSearchIngredient}) =>
             })
           }
         </section>
+      </div>
+      <div className='drinkInfo'>
+        {drinkListInfo.map((drinkListInfoMap,drinkListInfoIdx) =>
+          {
+            return (
+              <div key={drinkListInfoIdx}>
+                <h3 className='abv'> ABV:
+                  {drinkListInfoMap.strABV}%
+                </h3>
+                <h3 className='drinkDescription'>
+                  {drinkListInfoMap.strDescription}
+                </h3>
+              </div>
+                   )
+          })
+        }
       </div>
     </>
   :

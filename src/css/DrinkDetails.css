@@ -11,9 +11,9 @@
     grid-template-areas: 
       "img img img img img"
       "title title title title title"
-      "glass glass ingrD ingrd ingrd"
-      "mix mix mix mix mix"
-      "mix mix mix mix mix";
+      "glass glass mix mix mix"
+      "ingrD ingrD mix mix mix"
+      "ingrD ingrD mix mix mix";
     width: 550px;
     min-width: 550px;
     height: 550px;
@@ -64,6 +64,7 @@
   max-height: 100px;
   width: 170px;
   margin: 0;
+  margin-top: -75px;
   padding-left: 25px;
   grid-area: glass;
   z-index: 1;
@@ -79,9 +80,9 @@
 {
   align-items: center;
   margin: auto;
-  padding-left: 40px;
+  margin-top: -100px;
+  padding-left: 25px;
   grid-area: ingrD;
-  max-height: 130px;
   min-width: 270px;
   z-index: 1;
 }
@@ -100,9 +101,11 @@
 
 .mixingInstructions
 {
+  max-width: 250px;
+  margin-top: -96px;
   margin-bottom: 25px;
   margin-right: 20px;
-  padding-left: 25px;
+  padding-left: 70px;
   grid-area: mix;
   z-index: 1;
 }
@@ -110,8 +113,8 @@
 .mixingInstructions p
 {
   max-height: 150px;
-  text-overflow: ellipsis;
-  overflow: hidden;
+  /* text-overflow: ellipsis;
+  overflow: hidden; */
 }
 
 /* Back Button */
@@ -162,11 +165,11 @@
     grid-template-columns: 550px repeat(4, 1fr);
     grid-template-rows: repeat(5, 110px);
     grid-template-areas: 
-      "img title title title"
-      "img glass ingrD ingrD"
-      "img mix mix mix"
-      "img mix mix mix"
-      "img mix mix mix";
+      "img title mix mix"
+      "img glass mix mix"
+      "img ingrD mix mix"
+      "img ingrD mix mix"
+      "img ingrD mix mix";
     background-color: var(--grey);
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     min-width: 1000px;
@@ -198,6 +201,7 @@
   .drinkGlass
   {
     grid-area: glass;
+    margin: 0;
   }
 
   .drinkGlass h4
@@ -210,11 +214,14 @@
     list-style-type: none;
     display: block;
     grid-area: ingrD;
-    margin-top: 18px;
+    margin-left: -15px;
+    margin: 0;
   }
   
   .mixingInstructions
   {
     grid-area: mix;
+    margin-top: -81px;
+    max-width: 500px;
   }
 }
