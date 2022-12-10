@@ -31,7 +31,7 @@ https://www.thecocktaildb.com/
 $ npm install
 ```
 
-## Running the app
+## Running the App
 
 ```bash
 # development
@@ -46,24 +46,25 @@ npm run start:prod
 
 ## Contribution Guidelines:
 
+```bash
 - Add a back and forth button to toggle between drinks of the DrinkList.js from the DrinkDetails.js component.
 - Simplify the search to only need 1 search button for both "search by name" and "search by ingredient".
+```
 
-## Screenshots
+## Webpage Layout
 
 
-```bash
 ![HomePage](https://imgur.com/92QUhLv.jpg)
-```
 
-```bash
+
+
 ![Ingredient1Page](https://imgur.com/vnMgG80.jpg)
-```
 
-<!-- ```bash
+
+<!-- 
 ![DrinkListPage](https://imgur.com/.jpg)
-```
 
-```bash
-![DrinkDetailsPage](https://imgur.com/.jpg)
-``` -->
+
+
+![DrinkDetailsPage](https://imgur.com/.jpg) -->
+
