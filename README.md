@@ -1,26 +1,29 @@
-# H-API-HOUR
+# HAPI HOUR
 
 ## Description
 
-Welcome to H-API-HOUR! An app built to help you find drink recipes! You can search for a drink by name/ phrase, search by ingredient, choose and random drink, or start with your base ingredient choice and browse!
+HAPI Hour an app built to help you find drink recipes from the cocktail db API. You can search by name/ phrase, search by ingredient, choose and random drink, or start with a base ingredient choice and browse!
 
 ## Link to PLANNING.md
 
 [link to PLANNING.md](PLANNING.md)
 
+
+## API Link
+
+https://www.thecocktaildb.com/
+
+
 ## Technologies Used:
 
+```bash
 - HTML
 - CSS
 - JavaScript
 - React.js
 - Node.js
 - thecocktaildb - api
-
-## API Link
-
-https://www.thecocktaildb.com/
-
+```
 
 ## Installation
 
@@ -47,7 +50,20 @@ npm run start:prod
 - Simplify the search to only need 1 search button for both "search by name" and "search by ingredient".
 
 ## Screenshots
+
+
+```bash
 ![HomePage](https://imgur.com/92QUhLv.jpg)
+```
+
+```bash
 ![Ingredient1Page](https://imgur.com/vnMgG80.jpg)
-<!-- ![DrinkListPage](https://imgur.com/.jpg)
-![DrinkDetailsPage](https://imgur.com/.jpg) -->
+```
+
+<!-- ```bash
+![DrinkListPage](https://imgur.com/.jpg)
+```
+
+```bash
+![DrinkDetailsPage](https://imgur.com/.jpg)
+``` -->
