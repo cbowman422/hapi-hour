@@ -16,6 +16,7 @@
 {
   font-family: 'Bebas Neue', cursive;
   color: var(--yellow);
+  letter-spacing: 0.07rem;
 }
 
 .homeContainer

@@ -62,6 +62,7 @@
   filter: brightness(100%);
   transition: filter .5s;
 }
+
 .ingredientName:hover
 {
   filter: brightness(120%);
