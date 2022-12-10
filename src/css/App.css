@@ -109,3 +109,7 @@ button:hover
   border: 2px solid var(--light-color);
   border-radius: 0.5rem;
 }
+
+.apiHighlight {
+  color: #f0dfb6;
+}

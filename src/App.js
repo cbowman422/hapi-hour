@@ -79,7 +79,7 @@ function App()
           <RandomDrink />
         </div>
         <div className='pageTitle'>
-          <a href="/search">h-API-Hour</a>
+          <a href="/search">H<span className='apiHighlight'>API</span> Hour</a>
         </div>
         <div className="searchBar">
           <input type="text" id="myInput" value={searchBarItem} onChange={handleItemChange} placeholder='Search..'/>
