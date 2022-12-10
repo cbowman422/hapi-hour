@@ -81,10 +81,10 @@ const DrinkList = ({ingredientName, isSearchIngredient}) =>
               return (
                 <Link to={`/drinks-details/${drinkListMap.idDrink}`} key={drinkListIdx} className='componentCSS'>
                   <div>
-                    <img width={150} src={drinkListMap.strDrinkThumb}></img>
+                    <img width={170} src={drinkListMap.strDrinkThumb}></img>
                   </div>
                   <div className="cardTitle">
-                    {drinkListMap.strDrink}
+                    <h4>{drinkListMap.strDrink}</h4>
                   </div>
                 </Link>
                      )
