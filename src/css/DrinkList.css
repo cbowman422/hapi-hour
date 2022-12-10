@@ -117,5 +117,10 @@
 .drinkDescription
 {
   font-family: 'Roboto', sans-serif;
-  margin: 0 15px;
+  margin: 0 50px;
+}
+
+.abv
+{
+  margin: 10px 50px;
 }
