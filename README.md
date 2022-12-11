@@ -2,7 +2,7 @@
 
 ## Description
 
-HAPI Hour an app built to help you find drink recipes from the cocktail db API. You can search by name/ phrase, search by ingredient, choose and random drink, or start with a base ingredient choice and browse.
+HAPI Hour is an app built to help you find drink recipes from the cocktail db API. You can search by name/ phrase, search by ingredient, choose a random drink, or start with a base ingredient choice and browse.
 
 ## Link to PLANNING.md
 
@@ -56,26 +56,45 @@ npm run start:prod
 
 - Simplify the search to only need 1 search button for both "search by name" and "search by ingredient".
 
-- Add capability to favorite a recipe.
+- Add capability to favorite recipe.
 
-- Add capability to leave comments on recipe.
+- Add capability to leave comments on recipes.
 
 - Add capability to add your own recipe.
 ```
 
-## Webpage Layout
+## Webpage Layout Desktop
 
 
-![HomePage](https://imgur.com/92QUhLv.jpg)
-
-
-
-![Ingredient1Page](https://imgur.com/vnMgG80.jpg)
-
-
-<!-- 
-![DrinkListPage](https://imgur.com/.jpg)
+![HomePage](https://imgur.com/CxEXPkD.jpg)
 
 
 
-![DrinkDetailsPage](https://imgur.com/.jpg) -->
+![Ingredient1Page](https://imgur.com/NeQ2rzj.jpg)
+
+
+
+![DrinkListPage](https://imgur.com/hjG1uso.jpg)
+
+
+
+![DrinkDetailsPage](https://imgur.com/696iE8g.jpg)
+
+
+## Webpage Layout IPad
+
+
+![HomePage](https://imgur.com/MSbvtUE.jpg)
+
+
+
+![Ingredient1Page](https://imgur.com/fjirEQy.jpg)
+
+
+
+![DrinkListPage](https://imgur.com/7XuQPCX.jpg)
+
+
+
+![DrinkDetailsPage](https://imgur.com/TpOEYyC.jpg)
+
