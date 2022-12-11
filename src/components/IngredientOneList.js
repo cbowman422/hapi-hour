@@ -2,9 +2,10 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import Sticky from 'react-stickynode';
 import "../css/IngredientOneList.css"
+import "../css/IngredientOneList.css"
 
 // Componenent function.
-const IngredientOneList = (props) =>
+const IngredientOneList = (props) => 
 {
 
 // Function to scroll down in Home screen from click.
@@ -16,8 +17,28 @@ const IngredientOneList = (props) =>
 			behavior:"smooth"
 		})
 	}
+	function scrollToList()
+	{
+		window.scrollTo(
+		{
+			top: 940,
+			behavior:"smooth"
+		})
+	}
 
 // Function to display when at / path.
+	function Home()
+	{
+		return (
+			<div className='homeContainer'>
+				<img src='https://imgur.com/jFROHy1.jpg'/>
+				<div className='homeText'>
+					<h1>WELCOME</h1>
+					<a onClick={scrollToList}><h2>MENU</h2></a>
+				</div>
+			</div>
+		)
+	}
 	function Home()
 	{
 		return (
@@ -74,6 +95,7 @@ const IngredientOneList = (props) =>
 				)
 }
 
+export default IngredientOneList
 export default IngredientOneList
 
 

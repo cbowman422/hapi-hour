@@ -4,7 +4,7 @@ import { useParams } from 'react-router';
 import "../css/DrinkDetails.css"
 
 // Componenent function.
-const DrinkDetails = ({drinkName, isSearch}) =>
+const DrinkDetails = ({drinkName, isSearch}) => 
 {
 
 // Id variable from URL.
@@ -21,7 +21,8 @@ const DrinkDetails = ({drinkName, isSearch}) =>
   const url = baseUrl + specUrl;
 
 // Fetches API and stores it as json in state everytime isSearch returns true.
-  useEffect(() => {
+  useEffect(() => 
+  {
       fetch(url)
       .then((res) => res.json())
       .then((json) => 
@@ -32,11 +33,11 @@ const DrinkDetails = ({drinkName, isSearch}) =>
   }, [isSearch] );
   
 // Conditional return.
-  return ( drinkDetail ?
+  return ( drinkDetail ?   
     <>
-      {drinkDetail.map((detailsMap,idx) =>
+      {drinkDetail.map((detailsMap,idx) => 
         {
-          return (
+          return ( 
             <div key={idx}>
               <h2 className='detailsBack'>
                 <a href={`/drinks/${detailsMap.strIngredient1}`}><i className="backLink"></i>{detailsMap.strIngredient1}</a>
@@ -75,8 +76,8 @@ const DrinkDetails = ({drinkName, isSearch}) =>
             </div>
               )
         })
-      }
-    </>
+      } 
+    </> 
   :
     <p> Cocktail does not match. Try a new one!  </p>
          );

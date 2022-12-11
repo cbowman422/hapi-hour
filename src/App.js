@@ -20,57 +20,57 @@ function App()
   const [isSearchIngredient, setIsSearchIngredient] = useState(false)
 
 // Function to change state and reset state to false after click search by name.
-  const nameClick = () =>
+  const nameClick = () => 
   {
     setIsSearch(current => !current)
-    if (setIsSearch)
+    if (setIsSearch) 
     {
-      setTimeout(function()
+      setTimeout(function() 
       {
         setIsSearch(current => !current)
       }, 1);
-    }
-    else
+    } 
+    else 
     {
     }
   }
 
 // Function to change state and reset state to false after click search by ingredient.
-  const ingredientClick = () =>
+  const ingredientClick = () => 
   {
     setIsSearchIngredient(current => !current)
-    if (setIsSearchIngredient)
+    if (setIsSearchIngredient) 
     {
-      setTimeout(function()
+      setTimeout(function() 
       {
         setIsSearchIngredient(current => !current)
       }, 1);
-    }
-    else
+    } 
+    else 
     {
     }
   }
 
 // Event handler for setting the search bar input to an event and saving that event to state.
-  const handleItemChange = (e) =>
+  const handleItemChange = (e) => 
   {
     const newSearchItem = e.target.value
     setSearchBarItem(newSearchItem)
   }
 
 // Grabs the list of ingredients 1 from API for display on home/ search page.
-  useEffect(() =>
+  useEffect(() => 
   {
     const url = "https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list";
     fetch(url)
     .then((response) => response.json())
-    .then((json) =>
+    .then((json) => 
     {
       setSpiritList(json.drinks)
     })
     .catch(console.error)
   }, []);
-
+ 
 // Conditional return.
   return ( spiritList ?
     <div>
@@ -83,11 +83,11 @@ function App()
         </div>
         <div className="searchBar">
           <input type="text" id="myInput" value={searchBarItem} onChange={handleItemChange} placeholder='Search..'/>
-            <Link to={`/drinks-details/${searchBarItem}`}>
-              <button onClick={nameClick} className="searchName"> by name </button>
+            <Link to={`/drinks-details/${searchBarItem}`}> 
+              <button onClick={nameClick} className='searchName' > by name </button>
             </Link>
-            <Link to={`/drinks/${searchBarItem}`}>
-              <button onClick={ingredientClick} className="searchBase"> by base </button>
+            <Link to={`/drinks/${searchBarItem}`}> 
+              <button onClick={ingredientClick} className='searchBase' > by base </button>
             </Link>
         </div>
       </header>
