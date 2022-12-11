@@ -84,7 +84,7 @@ npm run start:prod
 ## Webpage Layout IPad
 
 
-![HomePage](https://imgur.com/MSbvtUE.jpg)
+![HomePage](https://imgur.com/YL62dae.jpg)
 
 
 
