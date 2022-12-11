@@ -96,7 +96,6 @@ const IngredientOneList = (props) =>
 }
 
 export default IngredientOneList
-export default IngredientOneList
 
 
 
