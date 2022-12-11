@@ -196,6 +196,7 @@
   {
     grid-area: title;
     margin: 0;
+    margin-top: 15px;
   }
 
   .drinkGlass
