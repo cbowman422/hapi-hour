@@ -1,5 +1,9 @@
 # HAPI HOUR
 
+## Link to Deployment
+
+https://main--dapper-kitten-809587.netlify.app
+
 ## Description
 
 HAPI Hour is an app built to help you find drink recipes from the cocktail db API. You can search by name/ phrase, search by ingredient, choose a random drink, or start with a base ingredient choice and browse.
@@ -28,6 +32,8 @@ https://www.thecocktaildb.com/
 - Node.js
 
 - thecocktaildb - api
+
+- Netlify
 ```
 
 ## Installation
