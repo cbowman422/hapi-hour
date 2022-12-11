@@ -44,34 +44,34 @@ const DrinkDetails = ({drinkName, isSearch}) =>
               </h2>
               <div className="details-container">
                 <img width={150} src={detailsMap.strDrinkThumb}></img>
+                <h3 className='drinkTitle'>{detailsMap.strDrink}</h3>
                   <div className='drinkGlass'>
-                    <h3 className='drinkTitle'>{detailsMap.strDrink}</h3>
                     <h4>Preferred Glass:</h4><p>{detailsMap.strGlass}</p>
                   </div>
-                  <div className='ingredientList'>
-                    <h4>Ingredients:</h4>
-                    <ul>
-                      <li className="detailList">{detailsMap.strMeasure1}{detailsMap.strIngredient1}</li>
-                      <li className="detailList">{detailsMap.strMeasure2}{detailsMap.strIngredient2}</li>
-                      <li className="detailList">{detailsMap.strMeasure3}{detailsMap.strIngredient3}</li>
-                      <li className="detailList">{detailsMap.strMeasure4}{detailsMap.strIngredient4}</li>
-                      <li className="detailList">{detailsMap.strMeasure5}{detailsMap.strIngredient5}</li>
-                      <li className="detailList">{detailsMap.strMeasure6}{detailsMap.strIngredient6}</li>
-                      <li className="detailList">{detailsMap.strMeasure7}{detailsMap.strIngredient7}</li>
-                      <li className="detailList">{detailsMap.strMeasure8}{detailsMap.strIngredient8}</li>
-                      <li className="detailList">{detailsMap.strMeasure9}{detailsMap.strIngredient9}</li>
-                      <li className="detailList">{detailsMap.strMeasure10}{detailsMap.strIngredient10}</li>
-                      <li className="detailList">{detailsMap.strMeasure11}{detailsMap.strIngredient11}</li>
-                      <li className="detailList">{detailsMap.strMeasure12}{detailsMap.strIngredient12}</li>
-                      <li className="detailList">{detailsMap.strMeasure13}{detailsMap.strIngredient13}</li>
-                      <li className="detailList">{detailsMap.strMeasure14}{detailsMap.strIngredient14}</li>
-                      <li className="detailList">{detailsMap.strMeasure15}{detailsMap.strIngredient15}</li>
-                    </ul>
-                  </div>
-                  <div className='mixingInstructions'>
-                    <h4>Mixing instructions:</h4>
-                    <p>{detailsMap.strInstructions}</p>
-                  </div>
+                <div className='ingredientList'>
+                  <h4>Ingredients:</h4>
+                  <ul>
+                    <li className="detailList">{detailsMap.strMeasure1}{detailsMap.strIngredient1}</li>
+                    <li className="detailList">{detailsMap.strMeasure2}{detailsMap.strIngredient2}</li>
+                    <li className="detailList">{detailsMap.strMeasure3}{detailsMap.strIngredient3}</li>
+                    <li className="detailList">{detailsMap.strMeasure4}{detailsMap.strIngredient4}</li>
+                    <li className="detailList">{detailsMap.strMeasure5}{detailsMap.strIngredient5}</li>
+                    <li className="detailList">{detailsMap.strMeasure6}{detailsMap.strIngredient6}</li>
+                    <li className="detailList">{detailsMap.strMeasure7}{detailsMap.strIngredient7}</li>
+                    <li className="detailList">{detailsMap.strMeasure8}{detailsMap.strIngredient8}</li>
+                    <li className="detailList">{detailsMap.strMeasure9}{detailsMap.strIngredient9}</li>
+                    <li className="detailList">{detailsMap.strMeasure10}{detailsMap.strIngredient10}</li>
+                    <li className="detailList">{detailsMap.strMeasure11}{detailsMap.strIngredient11}</li>
+                    <li className="detailList">{detailsMap.strMeasure12}{detailsMap.strIngredient12}</li>
+                    <li className="detailList">{detailsMap.strMeasure13}{detailsMap.strIngredient13}</li>
+                    <li className="detailList">{detailsMap.strMeasure14}{detailsMap.strIngredient14}</li>
+                    <li className="detailList">{detailsMap.strMeasure15}{detailsMap.strIngredient15}</li>
+                  </ul>
+                </div>
+                <div className='mixingInstructions'>
+                  <h4>Mixing instructions:</h4>
+                  <p>{detailsMap.strInstructions}</p>
+                </div>
               </div>
             </div>
               )

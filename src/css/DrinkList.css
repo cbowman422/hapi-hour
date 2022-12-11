@@ -1,35 +1,62 @@
-.sticky-outer-wrapper h2{
+
+/* Ingredient Title */
+.sticky-outer-wrapper h2
+{
   display: flex;
   justify-content: center;
-  align-content: center;
-  background-color: rgba(105, 105, 105, 0.35);
-  color: #c5aa6a;
+  background-color: rgba(63, 47, 47, 0.35);
+  color: var(--yellow);
   font-size: 36px;
   margin: 0;
   height: 60px;
+  min-width: fit-content;
   position: relative;
   z-index: 999;
 }
-.backBox a{
-    font-size: 24px;
-    margin-top: 12px;
-    color: #c5aa6a;
-    text-decoration: none;
-}
-.backBox i{
-    margin-right: 10px;
-}
-.ingredientSection {
-  margin-top: 80px;
-}
-.drinkList{
+
+#baseIngredients
+{
   display: flex;
-  flex-wrap: wrap; 
-  flex-direction: row;
-  justify-content: flex-start;
-  align-content: space-around;
+  align-items: center;
 }
-.drinkInfoDetails{
+
+/* Ingredient Back arrow */
+.backBox a
+{
+    font-size: 24px;
+    margin-left: 0px;
+    color: var(--yellow);
+    text-decoration: none;
+    filter:brightness(100%);
+    transition: filter .5s;
+}
+.backBox a:hover
+{
+  filter:brightness(120%);
+}
+
+.backBox i
+{
+  margin-left: 35px;
+  margin-right: 15px;
+  margin-bottom: 2px;
+}
+
+/* Cocktails */
+.ingredientSection
+{
+  margin-top: 15px;
+}
+
+.drinkList
+{
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+}
+
+.drinkInfoDetails
+{
   display: flex;
   flex-wrap: wrap;
   width: 100vh;
@@ -37,37 +64,81 @@
   white-space: nowrap;
   text-overflow: ellipsis;
 }
-.drinkInfoDetails h3{
+
+.drinkInfoDetails h3
+{
   width: 100%;
 }
-/* Cocktails Page CSS */
-.componentCSS {
-    display: inline-block;
-    background-color: #404040;
-    border-radius: 5px;
-    min-height: 150px;
-    min-width: 150px;
-    width: 150px;
-    margin: 10px;
-    text-decoration: none;
-    margin-left: 50px;
-    overflow: hidden;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  }
-  .componentCSS img{
-    background-color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 150px;
-  }
-  .cardTitle {
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    color: #c5aa6a;
-    font-weight: bold;
-    padding: 5px;
-    height: 50px;
-    font-size: 16px;
-  }
+
+/* Cocktails Cards*/
+.componentCSS
+{
+  display: inline-block;
+  background-color: var(--grey);
+  border-radius: 5px;
+  min-height: 150px;
+  min-width: 170px;
+  height: 250px;
+  width: 170px;
+  margin: 10px;
+  text-decoration: none;
+  margin-left: 50px;
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  color: var(--yellow);
+}
+
+.componentCSS:hover
+{
+  color: #d8bb77;
+}
+
+.componentCSS img
+{
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 170px;
+}
+
+.cardTitle
+{
+  display: flex;
+  justify-content: center;
+  color: var(--yellow);
+  font-weight: bold;
+  max-height: 80px;
+  padding: 5px;
+  font-size: 20px;
+  filter: brightness(100%);
+  transition: filter .5s;
+}
+
+.cardTitle h4
+{
+  align-self: center;
+  text-align: center;
+}
+
+.cardTitle:hover
+{
+  
+  filter: brightness(120%);
+}
+
+.drinkDescription
+{
+  display: block;
+  font-family: 'Roboto', sans-serif;
+  margin: 25px 50px;
+  /* overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap; */
+
+}
+
+.abv
+{
+  margin: 50px 50px 10px 50px;
+}
